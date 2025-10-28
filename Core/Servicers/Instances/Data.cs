@@ -605,7 +605,6 @@ namespace Core.Servicers.Instances
 
 
 
-                List<ColumnDataModel> list = new List<ColumnDataModel>();
 
 
                 List<ColumnDataModel> list = new List<ColumnDataModel>
