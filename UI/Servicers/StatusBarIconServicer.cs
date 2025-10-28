@@ -126,10 +126,16 @@ namespace UI.Servicers
             {
                 while (AppState.IsLoading)
                 {
-                    _statusBarIcon.Text = $"[{AppState.ProcessValue}%] Tai [{AppState.ActionText}]";
+                    Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        _statusBarIcon.Text = $"[{AppState.ProcessValue}%] Tai [{AppState.ActionText}]";
+                    });
                 }
-                _statusBarIcon.Text = "Tai!";
-                SetIcon();
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    _statusBarIcon.Text = "Tai!";
+                    SetIcon();
+                });
             });
         }
 
