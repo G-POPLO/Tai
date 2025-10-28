@@ -73,15 +73,17 @@ namespace UI.ViewModels
                 "按天","按周","按月","按年"
             };
 
-            var weekOptions = new List<SelectItemModel>();
-            weekOptions.Add(new SelectItemModel()
+            var weekOptions = new List<SelectItemModel>
             {
-                Name = "本周"
-            });
-            weekOptions.Add(new SelectItemModel()
-            {
-                Name = "上周"
-            });
+                new SelectItemModel()
+                {
+                    Name = "本周"
+                },
+                new SelectItemModel()
+                {
+                    Name = "上周"
+                }
+            };
 
             WeekOptions = weekOptions;
 

@@ -63,15 +63,15 @@ namespace UI.Servicers
 
             _statusBarIcon = new System.Windows.Forms.NotifyIcon();
             _statusBarIcon.Visible = true;
-            _statusBarIcon.MouseClick += _statusBarIcon_MouseClick;
-            _statusBarIcon.MouseDoubleClick += _statusBarIcon_MouseDoubleClick;
+            _statusBarIcon.MouseClick += StatusBarIcon_MouseClick;
+            _statusBarIcon.MouseDoubleClick += StatusBarIcon_MouseDoubleClick;
 
             SetIcon(IconType.Busy);
 
             WatchStateAsync();
 
-            _appObserver.OnAppActiveChanged += _appObserver_OnAppActiveChanged; ;
-            _themeServicer.OnThemeChanged += _themeServicer_OnThemeChanged;
+            _appObserver.OnAppActiveChanged += AppObserver_OnAppActiveChanged; ;
+            _themeServicer.OnThemeChanged += ThemeServicer_OnThemeChanged;
             Application.Current.DispatcherUnhandledException += Current_DispatcherUnhandledException;
         }
 
@@ -82,12 +82,12 @@ namespace UI.Servicers
             Logger.Save(true);
         }
 
-        private void _themeServicer_OnThemeChanged(object sender, EventArgs e)
+        private void ThemeServicer_OnThemeChanged(object sender, EventArgs e)
         {
             _contextMenu.UpdateDefaultStyle();
         }
 
-        private void _appObserver_OnAppActiveChanged(object sender, Core.Event.AppActiveChangedEventArgs e)
+        private void AppObserver_OnAppActiveChanged(object sender, Core.Event.AppActiveChangedEventArgs e)
         {
             Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Background, new Action(() =>
             {
@@ -173,7 +173,7 @@ namespace UI.Servicers
             {
                 _mainWindow = new MainWindow();
                 _mainWindow.DataContext = _mainVM;
-                _mainWindow.Loaded += _mainWindow_Loaded;
+                _mainWindow.Loaded += MainWindow_Loaded;
                 _mainVM.LoadDefaultPage();
             }
             if (config.General.IsSaveWindowSize)
@@ -189,7 +189,7 @@ namespace UI.Servicers
             _uIServicer.InitWindow(_mainWindow);
         }
 
-        private void _mainWindow_Loaded(object sender, RoutedEventArgs e)
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             var window = sender as MainWindow;
 
@@ -214,7 +214,7 @@ namespace UI.Servicers
             ShowMainWindow();
         }
 
-        private void _statusBarIcon_MouseDoubleClick(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void StatusBarIcon_MouseDoubleClick(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Left && !AppState.IsLoading)
             {
@@ -223,7 +223,7 @@ namespace UI.Servicers
             }
         }
 
-        private void _statusBarIcon_MouseClick(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void StatusBarIcon_MouseClick(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Right && !AppState.IsLoading)
             {

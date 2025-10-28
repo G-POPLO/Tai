@@ -55,7 +55,7 @@ namespace Core.Librarys
             try
             {
                 ManagementObjectSearcher managementObjectSearcher = new ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem");
-                foreach (ManagementObject obj in managementObjectSearcher.Get())
+                foreach (ManagementObject obj in managementObjectSearcher.Get().Cast<ManagementObject>())
                 {
                     name = obj["Name"].ToString();
                 }

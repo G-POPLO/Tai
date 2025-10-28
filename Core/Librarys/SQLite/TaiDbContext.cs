@@ -44,7 +44,7 @@ namespace Core.Librarys.SQLite
         /// </summary>
         public DbSet<WebUrlModel> WebUrls { get; set; }
 
-        private static string _dbFilePath = Path.Combine(FileHelper.GetRootDirectory(), "Data", "data.db");
+        private static readonly string _dbFilePath = Path.Combine(FileHelper.GetRootDirectory(), "Data", "data.db");
         public TaiDbContext()
        : base(new SQLiteConnection()
        {

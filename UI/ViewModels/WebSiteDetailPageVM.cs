@@ -106,13 +106,13 @@ namespace UI.ViewModels
             CreateContextMenu();
 
             PropertyChanged += WebSiteDetailPageVM_PropertyChanged;
-            _input.OnKeyUpInput += _input_OnKeyUpInput;
+            _input.OnKeyUpInput += Input_OnKeyUpInput;
 
             PageCommand = new Command(new Action<object>(OnPageCommand));
 
         }
 
-        private void _input_OnKeyUpInput(object sender, System.Windows.Forms.Keys key)
+        private void Input_OnKeyUpInput(object sender, System.Windows.Forms.Keys key)
         {
             if (key == System.Windows.Forms.Keys.F5)
             {

@@ -119,7 +119,7 @@ namespace Updater
                     return true;
 
                 }
-                catch (Exception ec)
+                catch (Exception)
                 {
                     return false;
                 }

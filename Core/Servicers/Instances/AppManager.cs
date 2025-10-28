@@ -66,8 +66,8 @@ namespace Core.Servicers.Instances
         public static extern bool GetGUIThreadInfo(uint idThread, ref GUITHREADINFO lpgui);
         #endregion
 
-        private Dictionary<string, AppInfo> _apps;
-        private int _outTime = 5000;
+        private readonly Dictionary<string, AppInfo> _apps;
+        private readonly int _outTime = 5000;
         //private string _windowsVersionName;
         public AppManager()
         {
@@ -240,7 +240,7 @@ namespace Core.Servicers.Instances
             return true;
         }
 
-        private IntPtr getThreadWindowHandle(uint dwThreadId_)
+        private IntPtr GetThreadWindowHandle(uint dwThreadId_)
         {
             IntPtr hWnd;
 
@@ -266,7 +266,7 @@ namespace Core.Servicers.Instances
         /// <returns></returns>
         private int GetFullScreenUWPPID()
         {
-            var current = getThreadWindowHandle(0);
+            var current = GetThreadWindowHandle(0);
             int processId = 0;
             GetWindowThreadProcessId(current, out processId);
             return processId;

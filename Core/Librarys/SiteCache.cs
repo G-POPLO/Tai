@@ -10,7 +10,7 @@ namespace Core.Librarys
 {
     public static class SiteCache
     {
-        private static List<Site> sites = new List<Site>();
+        private static readonly List<Site> sites = new List<Site>();
         private static readonly int maxNum = 100;
         public static Site Get(string key)
         {

@@ -37,8 +37,8 @@ namespace Core.Servicers.Instances
         private DateTime pressKeyboardLastTime;
 
         //  键盘钩子
-        private Win32API.LowLevelKeyboardProc keyboardProc;
-        private static IntPtr hookKeyboardID = IntPtr.Zero;
+        private readonly Win32API.LowLevelKeyboardProc keyboardProc;
+        private static readonly IntPtr hookKeyboardID = IntPtr.Zero;
 
 
         //  鼠标钩子
@@ -76,9 +76,11 @@ namespace Core.Servicers.Instances
         private void StartTimer()
         {
             StopTimer();
-            timer = new DispatcherTimer();
-            //timer.Interval = new TimeSpan(0, 0, 10);
-            timer.Interval = new TimeSpan(0, 5, 0);
+            timer = new DispatcherTimer
+            {
+                //timer.Interval = new TimeSpan(0, 0, 10);
+                Interval = new TimeSpan(0, 5, 0)
+            };
             timer.Tick += Timer_Tick;
             timer.Start();
         }

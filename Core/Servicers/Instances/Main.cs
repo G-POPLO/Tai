@@ -68,7 +68,7 @@ namespace Core.Servicers.Instances
         /// <summary>
         /// 忽略进程缓存列表
         /// </summary>
-        private List<string> IgnoreProcessCacheList;
+        private readonly List<string> IgnoreProcessCacheList;
 
         /// <summary>
         /// 配置正则忽略进程列表
@@ -81,7 +81,7 @@ namespace Core.Servicers.Instances
         //  更新应用日期
         private DateTime updadteAppDateTime_ = DateTime.Now.Date;
         //  已经更新过的应用列表
-        private List<string> updatedAppList = new List<string>();
+        private readonly List<string> updatedAppList = new List<string>();
         private List<string> _configProcessNameWhiteList, _configProcessRegexWhiteList;
         public Main(
             IAppObserver appObserver,
@@ -114,7 +114,7 @@ namespace Core.Servicers.Instances
 
             sleepdiscover.SleepStatusChanged += Sleepdiscover_SleepStatusChanged;
             appConfig.ConfigChanged += AppConfig_ConfigChanged;
-            _appTimer.OnAppDurationUpdated += _appTimer_OnAppDurationUpdated;
+            _appTimer.OnAppDurationUpdated += AppTimer_OnAppDurationUpdated;
             WebSocketEvent.OnWebLog += WebSocketEvent_OnWebLog;
         }
 
@@ -444,7 +444,7 @@ namespace Core.Servicers.Instances
         }
         #endregion
 
-        private void _appTimer_OnAppDurationUpdated(object sender, Event.AppDurationUpdatedEventArgs e)
+        private void AppTimer_OnAppDurationUpdated(object sender, Event.AppDurationUpdatedEventArgs e)
         {
             UpdateAppDuration(e);
         }

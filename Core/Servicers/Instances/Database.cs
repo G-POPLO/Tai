@@ -18,8 +18,8 @@ namespace Core.Servicers.Instances
         private readonly object _writeLocker = new object();
         private readonly object _readLocker = new object();
         private readonly object _closeLocker = new object();
-        private int _outTime = 60;
-        private int _readerNum = 0;
+        private readonly byte _outTime = 60;
+        private byte _readerNum = 0;
         private bool _isWriting = false;
         private bool _isReading = false;
         public TaiDbContext GetReaderContext()
@@ -27,7 +27,7 @@ namespace Core.Servicers.Instances
             lock (_readLocker)
             {
                 _isReading = true;
-                int duration = 0;
+                byte duration = 0;
                 while (_isWriting)
                 {
                     Thread.Sleep(1000);
@@ -62,7 +62,7 @@ namespace Core.Servicers.Instances
         {
             lock (_writeLocker)
             {
-                int duration = 0;
+                byte duration = 0;
                 while (_isWriting || _isReading)
                 {
                     Thread.Sleep(1000);

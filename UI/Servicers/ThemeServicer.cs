@@ -178,8 +178,7 @@ namespace UI.Servicers
         {
             if (mainWindow != null)
             {
-                var themeStyle = Application.Current.Resources["WindowStyle"] as Style;
-                if (themeStyle != null)
+                if (Application.Current.Resources["WindowStyle"] is Style themeStyle)
                 {
                     mainWindow.Style = themeStyle;
                 }

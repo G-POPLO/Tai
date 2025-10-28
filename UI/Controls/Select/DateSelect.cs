@@ -63,10 +63,10 @@ namespace UI.Controls.Select
             DependencyProperty.Register("Date",
                 typeof(DateTime),
                 typeof(DateSelect),
-                new PropertyMetadata(DateTime.Now, new PropertyChangedCallback(onDateChanged))
+                new PropertyMetadata(DateTime.Now, new PropertyChangedCallback(OnDateChanged))
                 );
 
-        private static void onDateChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnDateChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var control = d as DateSelect;
             control.Year = control.Date.Year;
@@ -146,8 +146,8 @@ namespace UI.Controls.Select
             }
         }
 
-        private Win32API.LowLevelKeyboardProc mouseProc;
-        private static IntPtr hookMouseID = IntPtr.Zero;
+        private readonly Win32API.LowLevelKeyboardProc mouseProc;
+        private static readonly IntPtr hookMouseID = IntPtr.Zero;
         private IntPtr hook;
         public Command ShowSelectCommand { get; set; }
         public Command SetYearCommand { get; set; }

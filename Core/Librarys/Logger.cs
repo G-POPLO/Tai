@@ -20,7 +20,7 @@ namespace Core.Librarys
 
         private static readonly object writeLock = new object();
 
-        private static List<string> loggers = new List<string>();
+        private static readonly List<string> loggers = new List<string>();
 
 
         static Logger()

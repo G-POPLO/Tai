@@ -215,7 +215,7 @@ namespace UI.Controls.SettingPanel
             // 遍历方法特性
             foreach (PropertyInfo pi in Data.GetType().GetProperties())
             {
-                foreach (Attribute attr in pi.GetCustomAttributes(true))
+                foreach (Attribute attr in pi.GetCustomAttributes(true).Cast<Attribute>())
                 {
                     if (attr is ConfigAttribute)
                     {

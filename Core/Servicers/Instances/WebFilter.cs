@@ -24,10 +24,10 @@ namespace Core.Servicers.Instances
         public void Init()
         {
             _ignoreURLCache = new List<string>();
-            _appConfig.ConfigChanged += _appConfig_ConfigChanged;
+            _appConfig.ConfigChanged += AppConfig_ConfigChanged;
         }
 
-        private void _appConfig_ConfigChanged(Models.Config.ConfigModel oldConfig, Models.Config.ConfigModel newConfig)
+        private void AppConfig_ConfigChanged(Models.Config.ConfigModel oldConfig, Models.Config.ConfigModel newConfig)
         {
             if (oldConfig.Behavior.IgnoreURLList != newConfig.Behavior.IgnoreURLList)
             {

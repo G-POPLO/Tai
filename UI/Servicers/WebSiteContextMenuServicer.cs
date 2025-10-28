@@ -57,7 +57,7 @@ namespace UI.Servicers
         {
             if (_menu != null)
             {
-                _menu.ContextMenuOpening -= _menu_ContextMenuOpening;
+                _menu.ContextMenuOpening -= Menu_ContextMenuOpening;
             }
             _menu = new ContextMenu();
             _menu.Items.Clear();
@@ -88,7 +88,7 @@ namespace UI.Servicers
             _menu.Items.Add(editAlias);
             _menu.Items.Add(new Separator());
             _menu.Items.Add(_block);
-            _menu.ContextMenuOpening += _menu_ContextMenuOpening;
+            _menu.ContextMenuOpening += Menu_ContextMenuOpening;
         }
 
         private async void EditAlias_ClickAsync(object sender, RoutedEventArgs e)
@@ -129,7 +129,7 @@ namespace UI.Servicers
             }
         }
 
-        private void _menu_ContextMenuOpening(object sender, ContextMenuEventArgs e)
+        private void Menu_ContextMenuOpening(object sender, ContextMenuEventArgs e)
         {
             if (_menu.Tag == null)
             {

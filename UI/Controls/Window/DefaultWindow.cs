@@ -224,7 +224,7 @@ namespace UI.Controls.Window
 
         private Border ToastBorder, Masklayer, DialogBorder, InputModalBorder;
         private Grid ToastGrid;
-        private DispatcherTimer toastTimer;
+        private readonly DispatcherTimer toastTimer;
         private bool IsDialogConfirm;
         private bool IsShowConfirmDialog, IsShowInputModal;
         private Button.Button CancelBtn, ConfirmBtn, InputModalCancelBtn, InputModalConfirmBtn;
@@ -251,7 +251,7 @@ namespace UI.Controls.Window
                 Icon = ToImageSource(System.Drawing.Icon.ExtractAssociatedIcon(exeFilePath));
             }
 
-            Loaded += window_Loaded;
+            Loaded += Window_Loaded;
             Unloaded += DefaultWindow_Unloaded;
 
             toastTimer = new DispatcherTimer();
@@ -266,7 +266,7 @@ namespace UI.Controls.Window
         private void DefaultWindow_Unloaded(object sender, RoutedEventArgs e)
         {
             Unloaded -= DefaultWindow_Unloaded;
-            Loaded -= window_Loaded;
+            Loaded -= Window_Loaded;
 
         }
 
@@ -304,7 +304,7 @@ namespace UI.Controls.Window
             return wpfBitmap;
         }
 
-        private void window_Loaded(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             OnSystemButtonsVisibility();
         }

@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("noberumotto")]
 [assembly: AssemblyProduct("Tai")]
-[assembly: AssemblyCopyright("Copyright ©  2021 https://github.com/noberumotto")]
+[assembly: AssemblyCopyright("Copyright ©  2025 https://github.com/noberumotto")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -51,5 +51,5 @@ using System.Windows;
 //可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值
 //通过使用 "*"，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.5.0.6")]
-[assembly: AssemblyFileVersion("1.5.0.6")]
+[assembly: AssemblyVersion("1.5.0.7")]
+[assembly: AssemblyFileVersion("1.5.0.7")]
