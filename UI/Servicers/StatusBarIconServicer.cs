@@ -128,14 +128,14 @@ namespace UI.Servicers
                 {
                     Application.Current.Dispatcher.Invoke(() =>
                     {
-                        _statusBarIcon.Text = $"[{AppState.ProcessValue}%] Tai [{AppState.ActionText}]";
+                    _statusBarIcon.Text = $"[{AppState.ProcessValue}%] Tai [{AppState.ActionText}]";
                     });
                 }
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    _statusBarIcon.Text = "Tai!";
-                    SetIcon();
-                });
+                _statusBarIcon.Text = "Tai!";
+                SetIcon();
+            });
             });
         }
 

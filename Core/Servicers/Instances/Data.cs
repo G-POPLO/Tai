@@ -531,8 +531,8 @@ namespace Core.Servicers.Instances
                 {
                     new ColumnDataModel()
                     {
-                        AppId = appID,
-                        Values = new double[24]
+                    AppId = appID,
+                    Values = new double[24]
                     }
                 };
 
@@ -570,8 +570,8 @@ namespace Core.Servicers.Instances
                 {
                     new ColumnDataModel()
                     {
-                        AppId = appID,
-                        Values = new double[(int)days]
+                    AppId = appID,
+                    Values = new double[(int)days]
                     }
                 };
 
@@ -605,12 +605,15 @@ namespace Core.Servicers.Instances
 
 
 
+                List<ColumnDataModel> list = new List<ColumnDataModel>();
+
+
                 List<ColumnDataModel> list = new List<ColumnDataModel>
                 {
                     new ColumnDataModel()
-                    {
-                        AppId = appID,
-                        Values = new double[12]
+                {
+                    AppId = appID,
+                    Values = new double[12]
                     }
                 };
 

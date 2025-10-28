@@ -77,11 +77,11 @@ namespace UI.ViewModels
             {
                 new SelectItemModel()
                 {
-                    Name = "本周"
+                Name = "本周"
                 },
                 new SelectItemModel()
-                {
-                    Name = "上周"
+            {
+                Name = "上周"
                 }
             };
 
