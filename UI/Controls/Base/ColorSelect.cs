@@ -17,7 +17,7 @@ namespace UI.Controls.Base
             get { return (List<string>)GetValue(ColorsProperty); }
             set { SetValue(ColorsProperty, value); }
         }
-        public static readonly DependencyProperty ColorsProperty =
+        public static   DependencyProperty ColorsProperty =
             DependencyProperty.Register("Colors",
                 typeof(List<string>),
                 typeof(ColorSelect)
@@ -29,7 +29,7 @@ namespace UI.Controls.Base
             get { return (string)GetValue(ColorProperty); }
             set { SetValue(ColorProperty, value); }
         }
-        public static readonly DependencyProperty ColorProperty =
+        public static   DependencyProperty ColorProperty =
             DependencyProperty.Register("Color",
                 typeof(string),
                 typeof(ColorSelect), new PropertyMetadata(new PropertyChangedCallback(OnColorPropertyChanged)));
@@ -49,7 +49,7 @@ namespace UI.Controls.Base
             get { return (bool)GetValue(IsOpenProperty); }
             set { SetValue(IsOpenProperty, value); }
         }
-        public static readonly DependencyProperty IsOpenProperty =
+        public static   DependencyProperty IsOpenProperty =
             DependencyProperty.Register("IsOpen",
                 typeof(bool),
                 typeof(ColorSelect), new PropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));

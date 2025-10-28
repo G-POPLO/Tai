@@ -12,10 +12,10 @@ namespace Core.Servicers.Instances
 {
     public class WebFilter : IWebFilter
     {
-        private readonly IAppConfig _appConfig;
+        private   IAppConfig _appConfig;
         private List<string> _ignoreURLCache;
         //  默认忽略的规则
-        private readonly string[] _ignoreRegexArr = { "^chrome://(.*)", "^edge://(.*)", "^view-source:(.*)" };
+        private   string[] _ignoreRegexArr = { "^chrome://(.*)", "^edge://(.*)", "^view-source:(.*)" };
         public WebFilter(IAppConfig appConfig_)
         {
             _appConfig = appConfig_;

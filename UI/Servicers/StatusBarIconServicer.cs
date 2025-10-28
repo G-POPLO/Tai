@@ -37,11 +37,11 @@ namespace UI.Servicers
             Busy
         }
 
-        private readonly IAppObserver _appObserver;
-        private readonly IThemeServicer _themeServicer;
-        private readonly MainViewModel _mainVM;
-        private readonly IAppConfig _appConfig;
-        private readonly IUIServicer _uIServicer;
+        private   IAppObserver _appObserver;
+        private   IThemeServicer _themeServicer;
+        private   MainViewModel _mainVM;
+        private   IAppConfig _appConfig;
+        private   IUIServicer _uIServicer;
         private MainWindow _mainWindow;
         public StatusBarIconServicer(
             IAppObserver appObserver_,

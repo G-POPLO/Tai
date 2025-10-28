@@ -30,10 +30,10 @@ namespace UI.Controls.SettingPanel
             public PropertyInfo PropertyInfo { get; set; }
         }
         public object Data { get { return (object)GetValue(DataProperty); } set { SetValue(DataProperty, value); } }
-        public static readonly DependencyProperty DataProperty = DependencyProperty.Register("Data", typeof(object), typeof(SettingPanel), new PropertyMetadata(new PropertyChangedCallback(OnDataChanged)));
+        public static   DependencyProperty DataProperty = DependencyProperty.Register("Data", typeof(object), typeof(SettingPanel), new PropertyMetadata(new PropertyChangedCallback(OnDataChanged)));
 
         public SolidColorBrush SpliteLineBrush { get { return (SolidColorBrush)GetValue(SpliteLineBrushProperty); } set { SetValue(SpliteLineBrushProperty, value); } }
-        public static readonly DependencyProperty SpliteLineBrushProperty = DependencyProperty.Register("SpliteLineBrush", typeof(SolidColorBrush), typeof(SettingPanel));
+        public static   DependencyProperty SpliteLineBrushProperty = DependencyProperty.Register("SpliteLineBrush", typeof(SolidColorBrush), typeof(SettingPanel));
 
         private static void OnDataChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -47,7 +47,7 @@ namespace UI.Controls.SettingPanel
 
         private StackPanel Container;
         private object configData;
-        private readonly string nosetGroupKey = "noset_group";
+        private   string nosetGroupKey = "noset_group";
         private bool isCanRender = true;
         private Dictionary<string, List<Config>> configList;
         public Dictionary<string, List<string>> SettingData { get; set; }

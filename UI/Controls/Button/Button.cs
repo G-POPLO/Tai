@@ -17,7 +17,7 @@ namespace UI.Controls.Button
             get { return (IconTypes)GetValue(IconProperty); }
             set { SetValue(IconProperty, value); }
         }
-        public static readonly DependencyProperty IconProperty =
+        public static   DependencyProperty IconProperty =
             DependencyProperty.Register("Icon",
                 typeof(IconTypes),
                 typeof(Button), new PropertyMetadata(IconTypes.None));
@@ -27,7 +27,7 @@ namespace UI.Controls.Button
             get { return (string)GetValue(TextProperty); }
             set { SetValue(TextProperty, value); }
         }
-        public static readonly DependencyProperty TextProperty =
+        public static   DependencyProperty TextProperty =
             DependencyProperty.Register("Text",
                 typeof(string),
                 typeof(Button));
@@ -36,7 +36,7 @@ namespace UI.Controls.Button
             get { return (bool)GetValue(ValueProperty); }
             set { SetValue(ValueProperty, value); }
         }
-        public static readonly DependencyProperty ValueProperty =
+        public static   DependencyProperty ValueProperty =
             DependencyProperty.Register("Value",
                 typeof(bool),
                 typeof(Button), new PropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));

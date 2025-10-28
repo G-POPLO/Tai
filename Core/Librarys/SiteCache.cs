@@ -10,8 +10,8 @@ namespace Core.Librarys
 {
     public static class SiteCache
     {
-        private static readonly List<Site> sites = new List<Site>();
-        private static readonly int maxNum = 100;
+        private static   List<Site> sites = new List<Site>();
+        private static   int maxNum = 100;
         public static Site Get(string key)
         {
             return sites.Where(m => m.Title.Equals(key)).FirstOrDefault();

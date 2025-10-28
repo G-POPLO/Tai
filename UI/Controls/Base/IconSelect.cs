@@ -17,7 +17,7 @@ namespace UI.Controls.Base
             get { return (List<string>)GetValue(DaysProperty); }
             set { SetValue(DaysProperty, value); }
         }
-        public static readonly DependencyProperty DaysProperty =
+        public static   DependencyProperty DaysProperty =
             DependencyProperty.Register("Icons",
                 typeof(List<string>),
                 typeof(IconSelect)
@@ -31,7 +31,7 @@ namespace UI.Controls.Base
             get { return (string)GetValue(URLProperty); }
             set { SetValue(URLProperty, value); }
         }
-        public static readonly DependencyProperty URLProperty =
+        public static   DependencyProperty URLProperty =
             DependencyProperty.Register("URL",
                 typeof(string),
                 typeof(IconSelect), new PropertyMetadata(new PropertyChangedCallback(OnURLPropertyChanged)));
@@ -50,7 +50,7 @@ namespace UI.Controls.Base
             get { return (bool)GetValue(IsOpenProperty); }
             set { SetValue(IsOpenProperty, value); }
         }
-        public static readonly DependencyProperty IsOpenProperty =
+        public static   DependencyProperty IsOpenProperty =
             DependencyProperty.Register("IsOpen",
                 typeof(bool),
                 typeof(IconSelect), new PropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));

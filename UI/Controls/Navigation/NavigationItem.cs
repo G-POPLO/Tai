@@ -18,7 +18,7 @@ namespace UI.Controls.Navigation
             get { return (int)GetValue(IDProperty); }
             set { SetValue(IDProperty, value); }
         }
-        public static readonly DependencyProperty IDProperty =
+        public static   DependencyProperty IDProperty =
             DependencyProperty.Register("ID",
                 typeof(int),
                 typeof(NavigationItem));
@@ -28,7 +28,7 @@ namespace UI.Controls.Navigation
             get { return (ICommand)GetValue(CommandProperty); }
             set { SetValue(CommandProperty, value); }
         }
-        public static readonly DependencyProperty CommandProperty =
+        public static   DependencyProperty CommandProperty =
             DependencyProperty.Register("Command",
                 typeof(ICommand),
                 typeof(NavigationItem));
@@ -38,7 +38,7 @@ namespace UI.Controls.Navigation
             get { return (object)GetValue(CommandParameterProperty); }
             set { SetValue(CommandParameterProperty, value); }
         }
-        public static readonly DependencyProperty CommandParameterProperty =
+        public static   DependencyProperty CommandParameterProperty =
             DependencyProperty.Register("CommandParameter",
                 typeof(object),
                 typeof(NavigationItem));
@@ -47,7 +47,7 @@ namespace UI.Controls.Navigation
             get { return (IconTypes)GetValue(IconProperty); }
             set { SetValue(IconProperty, value); }
         }
-        public static readonly DependencyProperty IconProperty =
+        public static   DependencyProperty IconProperty =
             DependencyProperty.Register("Icon",
                 typeof(IconTypes),
                 typeof(NavigationItem), new PropertyMetadata(IconTypes.None));
@@ -57,7 +57,7 @@ namespace UI.Controls.Navigation
             get { return (IconTypes)GetValue(SelectedIconIconProperty); }
             set { SetValue(SelectedIconIconProperty, value); }
         }
-        public static readonly DependencyProperty SelectedIconIconProperty =
+        public static   DependencyProperty SelectedIconIconProperty =
             DependencyProperty.Register("SelectedIconIcon",
                 typeof(IconTypes),
                 typeof(NavigationItem), new PropertyMetadata(IconTypes.None));
@@ -66,7 +66,7 @@ namespace UI.Controls.Navigation
             get { return (ColorTypes)GetValue(IconColorProperty); }
             set { SetValue(IconColorProperty, value); }
         }
-        public static readonly DependencyProperty IconColorProperty =
+        public static   DependencyProperty IconColorProperty =
             DependencyProperty.Register("IconColor",
                 typeof(ColorTypes),
                 typeof(NavigationItem), new PropertyMetadata(ColorTypes.Blue));
@@ -75,7 +75,7 @@ namespace UI.Controls.Navigation
             get { return (SolidColorBrush)GetValue(IconColorBrushProperty); }
             set { SetValue(IconColorBrushProperty, value); }
         }
-        public static readonly DependencyProperty IconColorBrushProperty =
+        public static   DependencyProperty IconColorBrushProperty =
             DependencyProperty.Register("IconColorBrush",
                 typeof(SolidColorBrush),
                 typeof(NavigationItem), new PropertyMetadata(UI.Base.Color.Colors.GetColor(ColorTypes.Blue)));
@@ -85,7 +85,7 @@ namespace UI.Controls.Navigation
             get { return (string)GetValue(TitleProperty); }
             set { SetValue(TitleProperty, value); }
         }
-        public static readonly DependencyProperty TitleProperty =
+        public static   DependencyProperty TitleProperty =
             DependencyProperty.Register("Title",
                 typeof(string),
                 typeof(NavigationItem), new PropertyMetadata(string.Empty));
@@ -95,7 +95,7 @@ namespace UI.Controls.Navigation
             get { return (string)GetValue(BadgeTextProperty); }
             set { SetValue(BadgeTextProperty, value); }
         }
-        public static readonly DependencyProperty BadgeTextProperty =
+        public static   DependencyProperty BadgeTextProperty =
             DependencyProperty.Register("BadgeText",
                 typeof(string),
                 typeof(NavigationItem), new PropertyMetadata(string.Empty));
@@ -104,7 +104,7 @@ namespace UI.Controls.Navigation
             get { return (string)GetValue(UriProperty); }
             set { SetValue(UriProperty, value); }
         }
-        public static readonly DependencyProperty UriProperty =
+        public static   DependencyProperty UriProperty =
             DependencyProperty.Register("Uri",
                 typeof(string),
                 typeof(NavigationItem), new PropertyMetadata(string.Empty));
@@ -114,7 +114,7 @@ namespace UI.Controls.Navigation
             get { return (bool)GetValue(IsSelectedProperty); }
             set { SetValue(IsSelectedProperty, value); }
         }
-        public static readonly DependencyProperty IsSelectedProperty =
+        public static   DependencyProperty IsSelectedProperty =
             DependencyProperty.Register("IsSelected",
                 typeof(bool),
                 typeof(NavigationItem), new PropertyMetadata(false));

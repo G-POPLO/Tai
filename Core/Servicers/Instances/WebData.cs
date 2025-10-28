@@ -25,8 +25,8 @@ namespace Core.Servicers.Instances
 {
     public class WebData : IWebData
     {
-        private readonly IDatabase _database;
-        private readonly object _createUrlLocker = new object();
+        private   IDatabase _database;
+        private   object _createUrlLocker = new object();
         public WebData(IDatabase database)
         {
             _database = database;

@@ -49,8 +49,8 @@ namespace Updater
         {
             public string Browser_download_url { get; set; }
         }
-        private readonly string githubUrl;
-        private readonly string nowVersion;
+        private   string githubUrl;
+        private   string nowVersion;
         public VersionInfo Info { get; set; }
 
         //public event UpdaterEventHandler RequestCompleteEvent;

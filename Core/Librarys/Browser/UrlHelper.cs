@@ -10,7 +10,7 @@ namespace Core.Librarys.Browser
 {
     public static class UrlHelper
     {
-        private static readonly Dictionary<string, string> _domainNamesDict = new Dictionary<string, string>()
+        private static   Dictionary<string, string> _domainNamesDict = new Dictionary<string, string>()
         {
             {"www.google.com","Google" },
             {"github.com","Github" },

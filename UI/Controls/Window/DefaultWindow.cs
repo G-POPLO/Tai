@@ -25,7 +25,7 @@ namespace UI.Controls.Window
     {
         #region 1.依赖属性
         #region Dialog
-        public static readonly DependencyProperty DialogTitleProperty = DependencyProperty.Register("DialogTitle", typeof(string), typeof(DefaultWindow));
+        public static   DependencyProperty DialogTitleProperty = DependencyProperty.Register("DialogTitle", typeof(string), typeof(DefaultWindow));
         /// <summary>
         /// Dialog title
         /// </summary>
@@ -35,7 +35,7 @@ namespace UI.Controls.Window
             set { SetValue(DialogTitleProperty, value); }
         }
 
-        public static readonly DependencyProperty DialogMessageProperty = DependencyProperty.Register("DialogMessage", typeof(string), typeof(DefaultWindow));
+        public static   DependencyProperty DialogMessageProperty = DependencyProperty.Register("DialogMessage", typeof(string), typeof(DefaultWindow));
         /// <summary>
         /// Dialog message
         /// </summary>
@@ -46,7 +46,7 @@ namespace UI.Controls.Window
         }
         #endregion
         #region InputModal
-        public static readonly DependencyProperty InputModalValueProperty = DependencyProperty.Register("InputModalValue", typeof(string), typeof(DefaultWindow));
+        public static   DependencyProperty InputModalValueProperty = DependencyProperty.Register("InputModalValue", typeof(string), typeof(DefaultWindow));
         /// <summary>
         /// Dialog title
         /// </summary>
@@ -56,7 +56,7 @@ namespace UI.Controls.Window
             set { SetValue(InputModalValueProperty, value); }
         }
         #endregion
-        public static readonly DependencyProperty IsShowToastDeproperty = DependencyProperty.Register("IsShowToast", typeof(bool), typeof(DefaultWindow), new PropertyMetadata(false, new PropertyChangedCallback(OnIsShowToastChanged)));
+        public static   DependencyProperty IsShowToastDeproperty = DependencyProperty.Register("IsShowToast", typeof(bool), typeof(DefaultWindow), new PropertyMetadata(false, new PropertyChangedCallback(OnIsShowToastChanged)));
         public bool IsShowToast { get { return (bool)GetValue(IsShowToastDeproperty); } set { SetValue(IsShowToastDeproperty, value); } }
         private static void OnIsShowToastChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -74,7 +74,7 @@ namespace UI.Controls.Window
             }
         }
 
-        public static readonly DependencyProperty ToastIconProperty = DependencyProperty.Register("ToastIcon", typeof(Base.IconTypes), typeof(DefaultWindow));
+        public static   DependencyProperty ToastIconProperty = DependencyProperty.Register("ToastIcon", typeof(Base.IconTypes), typeof(DefaultWindow));
         public Base.IconTypes ToastIcon
         {
             get
@@ -83,7 +83,7 @@ namespace UI.Controls.Window
             }
             set { SetValue(ToastIconProperty, value); }
         }
-        public static readonly DependencyProperty ToastContentProperty = DependencyProperty.Register("ToastContent", typeof(string), typeof(DefaultWindow));
+        public static   DependencyProperty ToastContentProperty = DependencyProperty.Register("ToastContent", typeof(string), typeof(DefaultWindow));
         /// <summary>
         /// toast content
         /// </summary>
@@ -92,7 +92,7 @@ namespace UI.Controls.Window
             get { return (string)GetValue(ToastContentProperty); }
             set { SetValue(ToastContentProperty, value); }
         }
-        public static readonly DependencyProperty ToastTypeProperty = DependencyProperty.Register("ToastType", typeof(ToastType), typeof(DefaultWindow), new PropertyMetadata(ToastType.Info));
+        public static   DependencyProperty ToastTypeProperty = DependencyProperty.Register("ToastType", typeof(ToastType), typeof(DefaultWindow), new PropertyMetadata(ToastType.Info));
         /// <summary>
         /// toast type
         /// </summary>
@@ -101,11 +101,11 @@ namespace UI.Controls.Window
             get { return (ToastType)GetValue(ToastTypeProperty); }
             set { SetValue(ToastTypeProperty, value); }
         }
-        public static readonly DependencyProperty PageContainerProperty = DependencyProperty.Register("PageContainer", typeof(PageContainer), typeof(DefaultWindow), new PropertyMetadata(null, new PropertyChangedCallback(OnPageContainerChanged)));
+        public static   DependencyProperty PageContainerProperty = DependencyProperty.Register("PageContainer", typeof(PageContainer), typeof(DefaultWindow), new PropertyMetadata(null, new PropertyChangedCallback(OnPageContainerChanged)));
         public PageContainer PageContainer { get { return (PageContainer)GetValue(PageContainerProperty); } set { SetValue(PageContainerProperty, value); } }
         #region 最小化按钮显示状态
 
-        public static readonly DependencyProperty MinimizeVisibilityProperty = DependencyProperty.Register("MinimizeVisibility", typeof(Visibility), typeof(DefaultWindow));
+        public static   DependencyProperty MinimizeVisibilityProperty = DependencyProperty.Register("MinimizeVisibility", typeof(Visibility), typeof(DefaultWindow));
 
         private static void OnPageContainerChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -137,7 +137,7 @@ namespace UI.Controls.Window
 
         #region 最大化按钮显示状态
 
-        public static readonly DependencyProperty MaximizeVisibilityProperty = DependencyProperty.Register("MaximizeVisibility", typeof(Visibility), typeof(DefaultWindow));
+        public static   DependencyProperty MaximizeVisibilityProperty = DependencyProperty.Register("MaximizeVisibility", typeof(Visibility), typeof(DefaultWindow));
 
         /// <summary>
         /// 最大化按钮显示状态
@@ -151,7 +151,7 @@ namespace UI.Controls.Window
 
         #region 关闭按钮显示状态
 
-        public static readonly DependencyProperty CloseVisibilityProperty = DependencyProperty.Register("CloseVisibility", typeof(Visibility), typeof(DefaultWindow));
+        public static   DependencyProperty CloseVisibilityProperty = DependencyProperty.Register("CloseVisibility", typeof(Visibility), typeof(DefaultWindow));
 
         /// <summary>
         /// 关闭按钮显示状态
@@ -164,7 +164,7 @@ namespace UI.Controls.Window
         #endregion
 
         #region 拓展内容
-        public static readonly DependencyProperty ExtElementProperty = DependencyProperty.Register("ExtElement", typeof(object), typeof(DefaultWindow));
+        public static   DependencyProperty ExtElementProperty = DependencyProperty.Register("ExtElement", typeof(object), typeof(DefaultWindow));
         /// <summary>
         /// 拓展内容
         /// </summary>
@@ -179,7 +179,7 @@ namespace UI.Controls.Window
 
         #region 是否穿透窗口
 
-        public static readonly DependencyProperty IsThruWindowProperty = DependencyProperty.Register("IsThruWindow", typeof(bool), typeof(DefaultWindow), new PropertyMetadata(false));
+        public static   DependencyProperty IsThruWindowProperty = DependencyProperty.Register("IsThruWindow", typeof(bool), typeof(DefaultWindow), new PropertyMetadata(false));
 
         /// <summary>
         /// 是否穿透窗口
@@ -192,7 +192,7 @@ namespace UI.Controls.Window
         #endregion
 
 
-        public static readonly DependencyProperty IsCanBackProperty = DependencyProperty.Register("IsCanBack", typeof(bool), typeof(DefaultWindow), new PropertyMetadata(false, new PropertyChangedCallback(OnIsCanBackChanged)));
+        public static   DependencyProperty IsCanBackProperty = DependencyProperty.Register("IsCanBack", typeof(bool), typeof(DefaultWindow), new PropertyMetadata(false, new PropertyChangedCallback(OnIsCanBackChanged)));
 
         private static void OnIsCanBackChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -224,7 +224,7 @@ namespace UI.Controls.Window
 
         private Border ToastBorder, Masklayer, DialogBorder, InputModalBorder;
         private Grid ToastGrid;
-        private readonly DispatcherTimer toastTimer;
+        private   DispatcherTimer toastTimer;
         private bool IsDialogConfirm;
         private bool IsShowConfirmDialog, IsShowInputModal;
         private Button.Button CancelBtn, ConfirmBtn, InputModalCancelBtn, InputModalConfirmBtn;

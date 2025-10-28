@@ -14,7 +14,7 @@ namespace UI.Controls.Base
             get { return (IconTypes)GetValue(IconTypeProperty); }
             set { SetValue(IconTypeProperty, value); }
         }
-        public static readonly DependencyProperty IconTypeProperty =
+        public static   DependencyProperty IconTypeProperty =
             DependencyProperty.Register("IconType",
                 typeof(IconTypes),
                 typeof(Icon), new PropertyMetadata(IconTypes.Back, new PropertyChangedCallback(OnIconTypeChanged)));
@@ -33,7 +33,7 @@ namespace UI.Controls.Base
             get { return (string)GetValue(UnicodeProperty); }
             set { SetValue(UnicodeProperty, value); }
         }
-        public static readonly DependencyProperty UnicodeProperty =
+        public static   DependencyProperty UnicodeProperty =
             DependencyProperty.Register("Unicode",
                 typeof(string),
                 typeof(Icon),

@@ -16,8 +16,8 @@ namespace UI.ViewModels
 {
     public class CategoryAppListPageVM : CategoryAppListPageModel
     {
-        private readonly IAppData appData;
-        private readonly MainViewModel mainVM;
+        private   IAppData appData;
+        private   MainViewModel mainVM;
         private List<ChooseAppModel> appList;
         public Command ShowChooseCommand { get; set; }
         public Command ChoosedCommand { get; set; }

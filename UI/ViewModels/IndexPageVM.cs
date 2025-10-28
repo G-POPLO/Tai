@@ -25,14 +25,14 @@ namespace UI.ViewModels
     {
         public Command ToDetailCommand { get; set; }
         public Command RefreshCommand { get; set; }
-        private readonly IData data;
-        private readonly MainViewModel main;
-        private readonly IMain mainServicer;
-        private readonly IAppContextMenuServicer appContextMenuServicer;
-        private readonly IInputServicer inputServicer;
-        private readonly IAppConfig appConfig;
-        private readonly IWebData _webData;
-        private readonly IWebSiteContextMenuServicer _webSiteContextMenu;
+        private   IData data;
+        private   MainViewModel main;
+        private   IMain mainServicer;
+        private   IAppContextMenuServicer appContextMenuServicer;
+        private   IInputServicer inputServicer;
+        private   IAppConfig appConfig;
+        private   IWebData _webData;
+        private   IWebSiteContextMenuServicer _webSiteContextMenu;
         public List<SelectItemModel> MoreTypeOptions { get; set; }
         public IndexPageVM(
             IData data,

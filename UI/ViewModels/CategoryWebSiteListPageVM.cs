@@ -18,8 +18,8 @@ namespace UI.ViewModels
 {
     public class CategoryWebSiteListPageVM : CategoryWebSiteListPageModel
     {
-        private readonly MainViewModel _mainVM;
-        private readonly IWebData _webData;
+        private   MainViewModel _mainVM;
+        private   IWebData _webData;
         public Command ShowChooseCommand { get; set; }
         public Command ChoosedCommand { get; set; }
         public Command GotoDetailCommand { get; set; }

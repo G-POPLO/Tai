@@ -9,13 +9,13 @@ namespace UI.Servicers
 {
     public class MainServicer : IMainServicer
     {
-        private readonly IMain main;
-        private readonly IThemeServicer themeServicer;
-        private readonly IInputServicer inputServicer;
-        private readonly IAppContextMenuServicer appContextMenuServicer;
-        private readonly IWebSiteContextMenuServicer _webSiteContext;
-        private readonly IStatusBarIconServicer _statusBarIconServicer;
-        private readonly IAppConfig _config;
+        private   IMain main;
+        private   IThemeServicer themeServicer;
+        private   IInputServicer inputServicer;
+        private   IAppContextMenuServicer appContextMenuServicer;
+        private   IWebSiteContextMenuServicer _webSiteContext;
+        private   IStatusBarIconServicer _statusBarIconServicer;
+        private   IAppConfig _config;
         private bool isSelfStart = false;
         public MainServicer(
             IMain main,

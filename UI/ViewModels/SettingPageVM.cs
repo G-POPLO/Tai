@@ -21,11 +21,11 @@ namespace UI.ViewModels
     public class SettingPageVM : SettingPageModel
     {
         private ConfigModel config;
-        private readonly IAppConfig appConfig;
-        private readonly MainViewModel mainVM;
-        private readonly IData data;
-        private readonly IWebData _webData;
-        private readonly IUIServicer _uiServicer;
+        private   IAppConfig appConfig;
+        private   MainViewModel mainVM;
+        private   IData data;
+        private   IWebData _webData;
+        private   IUIServicer _uiServicer;
         public Command OpenURL { get; set; }
         public Command CheckUpdate { get; set; }
         public Command DelDataCommand { get; set; }

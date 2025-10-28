@@ -12,13 +12,13 @@ namespace UI.Controls.List
     public class BaseListItem : Control
     {
         public string Text { get { return (string)GetValue(TextProperty); } set { SetValue(TextProperty, value); } }
-        public static readonly DependencyProperty TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(BaseListItem));
+        public static   DependencyProperty TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(BaseListItem));
 
         public bool IsSelected { get { return (bool)GetValue(IsSelectedProperty); } set { SetValue(IsSelectedProperty, value); } }
-        public static readonly DependencyProperty IsSelectedProperty = DependencyProperty.Register("IsSelected", typeof(bool), typeof(BaseListItem));
+        public static   DependencyProperty IsSelectedProperty = DependencyProperty.Register("IsSelected", typeof(bool), typeof(BaseListItem));
 
         //public Command RemoveCommand { get { return (string)GetValue(TextProperty); } set { SetValue(TextProperty, value); } }
-        //public static readonly DependencyProperty TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(BaseListItem));
+        //public static   DependencyProperty TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(BaseListItem));
 
         //public event EventHandler ItemChanged;
 

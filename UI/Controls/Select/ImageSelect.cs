@@ -15,7 +15,7 @@ namespace UI.Controls.Select
             get { return (string)GetValue(URLProperty); }
             set { SetValue(URLProperty, value); }
         }
-        public static readonly DependencyProperty URLProperty =
+        public static   DependencyProperty URLProperty =
             DependencyProperty.Register("URL",
                 typeof(string),
                 typeof(ImageSelect), new PropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));
@@ -34,7 +34,7 @@ namespace UI.Controls.Select
             get { return (bool)GetValue(IsSelectedProperty); }
             set { SetValue(IsSelectedProperty, value); }
         }
-        public static readonly DependencyProperty IsSelectedProperty =
+        public static   DependencyProperty IsSelectedProperty =
             DependencyProperty.Register("IsSelected",
                 typeof(bool),
                 typeof(ImageSelect), new PropertyMetadata(false));
@@ -44,7 +44,7 @@ namespace UI.Controls.Select
             get { return (double)GetValue(ImageWidthProperty); }
             set { SetValue(ImageWidthProperty, value); }
         }
-        public static readonly DependencyProperty ImageWidthProperty =
+        public static   DependencyProperty ImageWidthProperty =
             DependencyProperty.Register("ImageWidth",
                 typeof(double),
                 typeof(ImageSelect), new PropertyMetadata((double)30));
@@ -54,7 +54,7 @@ namespace UI.Controls.Select
             get { return (double)GetValue(ImageHeightProperty); }
             set { SetValue(ImageHeightProperty, value); }
         }
-        public static readonly DependencyProperty ImageHeightProperty =
+        public static   DependencyProperty ImageHeightProperty =
             DependencyProperty.Register("ImageHeight",
                 typeof(double),
                 typeof(ImageSelect), new PropertyMetadata((double)30));

@@ -31,7 +31,7 @@ namespace UI.Controls.Charts
             get { return (ChartsDataModel)GetValue(DataProperty); }
             set { SetValue(DataProperty, value); }
         }
-        public static readonly DependencyProperty DataProperty =
+        public static   DependencyProperty DataProperty =
             DependencyProperty.Register("Data",
                 typeof(ChartsDataModel),
                 typeof(ChartsItemTypeCard));
@@ -48,7 +48,7 @@ namespace UI.Controls.Charts
             get { return (double)GetValue(MaxValueProperty); }
             set { SetValue(MaxValueProperty, value); }
         }
-        public static readonly DependencyProperty MaxValueProperty =
+        public static   DependencyProperty MaxValueProperty =
             DependencyProperty.Register("MaxValue",
                 typeof(double),
                 typeof(ChartsItemTypeCard));
@@ -65,7 +65,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsLoadingProperty); }
             set { SetValue(IsLoadingProperty, value); }
         }
-        public static readonly DependencyProperty IsLoadingProperty =
+        public static   DependencyProperty IsLoadingProperty =
             DependencyProperty.Register("IsLoading",
                 typeof(bool),
                 typeof(ChartsItemTypeCard));

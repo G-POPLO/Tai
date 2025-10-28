@@ -17,7 +17,7 @@ namespace UI.Controls.Toggle
             get { return (bool)GetValue(IsCheckedProperty); }
             set { SetValue(IsCheckedProperty, value); }
         }
-        public static readonly DependencyProperty IsCheckedProperty =
+        public static   DependencyProperty IsCheckedProperty =
             DependencyProperty.Register("IsChecked", typeof(bool), typeof(Toggle), new FrameworkPropertyMetadata(true, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, new PropertyChangedCallback(OnIsCheckedChanged)));
 
         private static void OnIsCheckedChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -31,28 +31,28 @@ namespace UI.Controls.Toggle
             get { return (ToggleTextPosition)GetValue(TextPositionProperty); }
             set { SetValue(TextPositionProperty, value); }
         }
-        public static readonly DependencyProperty TextPositionProperty =
+        public static   DependencyProperty TextPositionProperty =
             DependencyProperty.Register("TextPosition", typeof(ToggleTextPosition), typeof(Toggle), new PropertyMetadata(ToggleTextPosition.Right));
         public string OnText
         {
             get { return (string)GetValue(OnTextProperty); }
             set { SetValue(OnTextProperty, value); }
         }
-        public static readonly DependencyProperty OnTextProperty =
+        public static   DependencyProperty OnTextProperty =
             DependencyProperty.Register("OnText", typeof(string), typeof(Toggle), new PropertyMetadata("开"));
         public string OffText
         {
             get { return (string)GetValue(OffTextProperty); }
             set { SetValue(OffTextProperty, value); }
         }
-        public static readonly DependencyProperty OffTextProperty =
+        public static   DependencyProperty OffTextProperty =
             DependencyProperty.Register("OffText", typeof(string), typeof(Toggle), new PropertyMetadata("关"));
         public string Text
         {
             get { return (string)GetValue(TextProperty); }
             set { SetValue(TextProperty, value); }
         }
-        public static readonly DependencyProperty TextProperty =
+        public static   DependencyProperty TextProperty =
             DependencyProperty.Register("Text", typeof(string), typeof(Toggle));
 
         public Toggle()

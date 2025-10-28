@@ -37,8 +37,8 @@ namespace Core.Servicers.Instances
         private DateTime pressKeyboardLastTime;
 
         //  键盘钩子
-        private readonly Win32API.LowLevelKeyboardProc keyboardProc;
-        private static readonly IntPtr hookKeyboardID = IntPtr.Zero;
+        private   Win32API.LowLevelKeyboardProc keyboardProc;
+        private static   IntPtr hookKeyboardID = IntPtr.Zero;
 
 
         //  鼠标钩子

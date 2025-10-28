@@ -22,7 +22,7 @@ namespace UI.Controls.Charts
             get { return (double)GetValue(MaxValueProperty); }
             set { SetValue(MaxValueProperty, value); }
         }
-        public static readonly DependencyProperty MaxValueProperty =
+        public static   DependencyProperty MaxValueProperty =
             DependencyProperty.Register("MaxValue",
                 typeof(double),
                 typeof(ChartItemTypeColumn));
@@ -39,7 +39,7 @@ namespace UI.Controls.Charts
             get { return (double)GetValue(ValueProperty); }
             set { SetValue(ValueProperty, value); }
         }
-        public static readonly DependencyProperty ValueProperty =
+        public static   DependencyProperty ValueProperty =
             DependencyProperty.Register("Value",
                 typeof(double),
                 typeof(ChartItemTypeColumn));
@@ -55,7 +55,7 @@ namespace UI.Controls.Charts
             get { return (string)GetValue(ColorProperty); }
             set { SetValue(ColorProperty, value); }
         }
-        public static readonly DependencyProperty ColorProperty =
+        public static   DependencyProperty ColorProperty =
             DependencyProperty.Register("Color",
                 typeof(string),
                 typeof(ChartItemTypeColumn));
@@ -71,7 +71,7 @@ namespace UI.Controls.Charts
             get { return (string)GetValue(ColumnNameProperty); }
             set { SetValue(ColumnNameProperty, value); }
         }
-        public static readonly DependencyProperty ColumnNameProperty =
+        public static   DependencyProperty ColumnNameProperty =
             DependencyProperty.Register("ColumnName",
                 typeof(string),
                 typeof(ChartItemTypeColumn));

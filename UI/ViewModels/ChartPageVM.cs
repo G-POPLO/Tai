@@ -21,13 +21,13 @@ namespace UI.ViewModels
 {
     public class ChartPageVM : ChartPageModel
     {
-        private readonly ICategorys categorys;
-        private readonly IData data;
-        private readonly MainViewModel mainVM;
-        private readonly IAppContextMenuServicer appContextMenuServicer;
-        private readonly IInputServicer inputServicer;
-        private readonly IWebData _webData;
-        private readonly IWebSiteContextMenuServicer _webSiteContextMenu;
+        private   ICategorys categorys;
+        private   IData data;
+        private   MainViewModel mainVM;
+        private   IAppContextMenuServicer appContextMenuServicer;
+        private   IInputServicer inputServicer;
+        private   IWebData _webData;
+        private   IWebSiteContextMenuServicer _webSiteContextMenu;
 
         private double totalTime_ = 0;
         private int appCount_ = 0;

@@ -35,7 +35,7 @@ namespace UI.Controls.Charts
             get { return (ChartsType)GetValue(ChartsTypeProperty); }
             set { SetValue(ChartsTypeProperty, value); }
         }
-        public static readonly DependencyProperty ChartsTypeProperty =
+        public static   DependencyProperty ChartsTypeProperty =
             DependencyProperty.Register("ChartsType",
                 typeof(ChartsType),
                 typeof(Charts));
@@ -51,7 +51,7 @@ namespace UI.Controls.Charts
             get { return (double)GetValue(MaxValueLimitProperty); }
             set { SetValue(MaxValueLimitProperty, value); }
         }
-        public static readonly DependencyProperty MaxValueLimitProperty =
+        public static   DependencyProperty MaxValueLimitProperty =
             DependencyProperty.Register("MaxValueLimit",
                 typeof(double),
                 typeof(Charts),
@@ -68,7 +68,7 @@ namespace UI.Controls.Charts
             get { return (int)GetValue(ShowLimitProperty); }
             set { SetValue(ShowLimitProperty, value); }
         }
-        public static readonly DependencyProperty ShowLimitProperty =
+        public static   DependencyProperty ShowLimitProperty =
             DependencyProperty.Register("ShowLimit",
                 typeof(int),
                 typeof(Charts),
@@ -85,7 +85,7 @@ namespace UI.Controls.Charts
             get { return (IEnumerable<ChartsDataModel>)GetValue(DataProperty); }
             set { SetValue(DataProperty, value); }
         }
-        public static readonly DependencyProperty DataProperty =
+        public static   DependencyProperty DataProperty =
             DependencyProperty.Register("Data",
                 typeof(IEnumerable<ChartsDataModel>),
                 typeof(Charts),
@@ -97,7 +97,7 @@ namespace UI.Controls.Charts
             get { return (IEnumerable<ChartsDataModel>)GetValue(ListViewBindingDataProperty); }
             set { SetValue(ListViewBindingDataProperty, value); }
         }
-        public static readonly DependencyProperty ListViewBindingDataProperty =
+        public static   DependencyProperty ListViewBindingDataProperty =
             DependencyProperty.Register("ListViewBindingData",
                 typeof(IEnumerable<ChartsDataModel>),
                 typeof(Charts));
@@ -111,7 +111,7 @@ namespace UI.Controls.Charts
             get { return (int)GetValue(LoadingPlaceholderCountProperty); }
             set { SetValue(LoadingPlaceholderCountProperty, value); }
         }
-        public static readonly DependencyProperty LoadingPlaceholderCountProperty =
+        public static   DependencyProperty LoadingPlaceholderCountProperty =
             DependencyProperty.Register("LoadingPlaceholderCount",
                 typeof(int),
                 typeof(Charts),
@@ -128,7 +128,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsLoadingProperty); }
             set { SetValue(IsLoadingProperty, value); }
         }
-        public static readonly DependencyProperty IsLoadingProperty =
+        public static   DependencyProperty IsLoadingProperty =
             DependencyProperty.Register("IsLoading",
                 typeof(bool),
                 typeof(Charts),
@@ -146,7 +146,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsCanScrollProperty); }
             set { SetValue(IsCanScrollProperty, value); }
         }
-        public static readonly DependencyProperty IsCanScrollProperty =
+        public static   DependencyProperty IsCanScrollProperty =
             DependencyProperty.Register("IsCanScroll",
                 typeof(bool),
                 typeof(Charts),
@@ -163,7 +163,7 @@ namespace UI.Controls.Charts
             get { return (Command)GetValue(ClickCommandProperty); }
             set { SetValue(ClickCommandProperty, value); }
         }
-        public static readonly DependencyProperty ClickCommandProperty =
+        public static   DependencyProperty ClickCommandProperty =
             DependencyProperty.Register("ClickCommand",
                 typeof(Command),
                 typeof(Charts));
@@ -179,7 +179,7 @@ namespace UI.Controls.Charts
             get { return (List<ChartColumnInfoModel>)GetValue(ColumnInfoListProperty); }
             set { SetValue(ColumnInfoListProperty, value); }
         }
-        public static readonly DependencyProperty ColumnInfoListProperty =
+        public static   DependencyProperty ColumnInfoListProperty =
             DependencyProperty.Register("ColumnInfoList",
                 typeof(List<ChartColumnInfoModel>),
                 typeof(Charts)
@@ -196,7 +196,7 @@ namespace UI.Controls.Charts
             get { return (string)GetValue(MedianProperty); }
             set { SetValue(MedianProperty, value); }
         }
-        public static readonly DependencyProperty MedianProperty =
+        public static   DependencyProperty MedianProperty =
             DependencyProperty.Register("Median",
                 typeof(string),
                 typeof(Charts)
@@ -213,7 +213,7 @@ namespace UI.Controls.Charts
             get { return (string)GetValue(MaximumProperty); }
             set { SetValue(MaximumProperty, value); }
         }
-        public static readonly DependencyProperty MaximumProperty =
+        public static   DependencyProperty MaximumProperty =
             DependencyProperty.Register("Maximum",
                 typeof(string),
                 typeof(Charts)
@@ -230,7 +230,7 @@ namespace UI.Controls.Charts
             get { return (string)GetValue(UnitProperty); }
             set { SetValue(UnitProperty, value); }
         }
-        public static readonly DependencyProperty UnitProperty =
+        public static   DependencyProperty UnitProperty =
             DependencyProperty.Register("Unit",
                 typeof(string),
                 typeof(Charts)
@@ -247,7 +247,7 @@ namespace UI.Controls.Charts
             get { return (string)GetValue(TotalProperty); }
             set { SetValue(TotalProperty, value); }
         }
-        public static readonly DependencyProperty TotalProperty =
+        public static   DependencyProperty TotalProperty =
             DependencyProperty.Register("Total",
                 typeof(string),
                 typeof(Charts)
@@ -265,7 +265,7 @@ namespace UI.Controls.Charts
             get { return (ChartDataValueType)GetValue(DataValueTypeProperty); }
             set { SetValue(DataValueTypeProperty, value); }
         }
-        public static readonly DependencyProperty DataValueTypeProperty =
+        public static   DependencyProperty DataValueTypeProperty =
             DependencyProperty.Register("DataValueType",
                 typeof(ChartDataValueType),
                 typeof(Charts)
@@ -280,7 +280,7 @@ namespace UI.Controls.Charts
             get { return (int)GetValue(NameIndexStartProperty); }
             set { SetValue(NameIndexStartProperty, value); }
         }
-        public static readonly DependencyProperty NameIndexStartProperty =
+        public static   DependencyProperty NameIndexStartProperty =
             DependencyProperty.Register("NameIndexStart",
                 typeof(int),
                 typeof(Charts), new PropertyMetadata((int)0)
@@ -297,7 +297,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsEmptyProperty); }
             set { SetValue(IsEmptyProperty, value); }
         }
-        public static readonly DependencyProperty IsEmptyProperty =
+        public static   DependencyProperty IsEmptyProperty =
             DependencyProperty.Register("IsEmpty",
                 typeof(bool),
                 typeof(Charts),
@@ -314,7 +314,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsShowTotalProperty); }
             set { SetValue(IsShowTotalProperty, value); }
         }
-        public static readonly DependencyProperty IsShowTotalProperty =
+        public static   DependencyProperty IsShowTotalProperty =
             DependencyProperty.Register("IsShowTotal",
                 typeof(bool),
                 typeof(Charts),
@@ -331,7 +331,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsCanColumnSelectProperty); }
             set { SetValue(IsCanColumnSelectProperty, value); }
         }
-        public static readonly DependencyProperty IsCanColumnSelectProperty =
+        public static   DependencyProperty IsCanColumnSelectProperty =
             DependencyProperty.Register("IsCanColumnSelect",
                 typeof(bool),
                 typeof(Charts),
@@ -348,7 +348,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsSearchProperty); }
             set { SetValue(IsSearchProperty, value); }
         }
-        public static readonly DependencyProperty IsSearchProperty =
+        public static   DependencyProperty IsSearchProperty =
             DependencyProperty.Register("IsSearch",
                 typeof(bool),
                 typeof(Charts),
@@ -365,7 +365,7 @@ namespace UI.Controls.Charts
             get { return (int)GetValue(ColumnSelectedIndexProperty); }
             set { SetValue(ColumnSelectedIndexProperty, value); }
         }
-        public static readonly DependencyProperty ColumnSelectedIndexProperty =
+        public static   DependencyProperty ColumnSelectedIndexProperty =
             DependencyProperty.Register("ColumnSelectedIndex",
                 typeof(int),
                 typeof(Charts), new PropertyMetadata(-1, new PropertyChangedCallback(OnPropertyChanged)));
@@ -381,7 +381,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsShowBadgeProperty); }
             set { SetValue(IsShowBadgeProperty, value); }
         }
-        public static readonly DependencyProperty IsShowBadgeProperty =
+        public static   DependencyProperty IsShowBadgeProperty =
             DependencyProperty.Register("IsShowBadge",
                 typeof(bool),
                 typeof(Charts),
@@ -394,7 +394,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsShowValuesPopupProperty); }
             set { SetValue(IsShowValuesPopupProperty, value); }
         }
-        public static readonly DependencyProperty IsShowValuesPopupProperty =
+        public static   DependencyProperty IsShowValuesPopupProperty =
             DependencyProperty.Register("IsShowValuesPopup",
                 typeof(bool),
                 typeof(Charts),
@@ -404,7 +404,7 @@ namespace UI.Controls.Charts
             get { return (FrameworkElement)GetValue(ValuesPopupPlacementTargetProperty); }
             set { SetValue(ValuesPopupPlacementTargetProperty, value); }
         }
-        public static readonly DependencyProperty ValuesPopupPlacementTargetProperty =
+        public static   DependencyProperty ValuesPopupPlacementTargetProperty =
             DependencyProperty.Register("ValuesPopupPlacementTarget",
                 typeof(FrameworkElement),
                 typeof(Charts));
@@ -414,7 +414,7 @@ namespace UI.Controls.Charts
             get { return (List<ChartColumnInfoModel>)GetValue(ColumnValuesInfoListProperty); }
             set { SetValue(ColumnValuesInfoListProperty, value); }
         }
-        public static readonly DependencyProperty ColumnValuesInfoListProperty =
+        public static   DependencyProperty ColumnValuesInfoListProperty =
             DependencyProperty.Register("ColumnValuesInfoList",
                 typeof(List<ChartColumnInfoModel>),
                 typeof(Charts)
@@ -425,7 +425,7 @@ namespace UI.Controls.Charts
             get { return (double)GetValue(ValuesPopupHorizontalOffsetProperty); }
             set { SetValue(ValuesPopupHorizontalOffsetProperty, value); }
         }
-        public static readonly DependencyProperty ValuesPopupHorizontalOffsetProperty =
+        public static   DependencyProperty ValuesPopupHorizontalOffsetProperty =
             DependencyProperty.Register("ValuesPopupHorizontalOffset",
                 typeof(double),
                 typeof(Charts));
@@ -438,7 +438,7 @@ namespace UI.Controls.Charts
             get { return (double)GetValue(DataMaximumProperty); }
             set { SetValue(DataMaximumProperty, value); }
         }
-        public static readonly DependencyProperty DataMaximumProperty =
+        public static   DependencyProperty DataMaximumProperty =
             DependencyProperty.Register("DataMaximum",
                 typeof(double),
                 typeof(Charts),
@@ -449,7 +449,7 @@ namespace UI.Controls.Charts
             get { return (double)GetValue(DataMaxValueProperty); }
             set { SetValue(DataMaxValueProperty, value); }
         }
-        public static readonly DependencyProperty DataMaxValueProperty =
+        public static   DependencyProperty DataMaxValueProperty =
             DependencyProperty.Register("DataMaxValue",
                 typeof(double),
                 typeof(Charts),
@@ -465,7 +465,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsStackProperty); }
             set { SetValue(IsStackProperty, value); }
         }
-        public static readonly DependencyProperty IsStackProperty =
+        public static   DependencyProperty IsStackProperty =
             DependencyProperty.Register("IsStack",
                 typeof(bool),
                 typeof(Charts),
@@ -482,7 +482,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsShowCategoryProperty); }
             set { SetValue(IsShowCategoryProperty, value); }
         }
-        public static readonly DependencyProperty IsShowCategoryProperty =
+        public static   DependencyProperty IsShowCategoryProperty =
             DependencyProperty.Register("IsShowCategory",
                 typeof(bool),
                 typeof(Charts),
@@ -499,7 +499,7 @@ namespace UI.Controls.Charts
             get { return (double)GetValue(IconSizeProperty); }
             set { SetValue(IconSizeProperty, value); }
         }
-        public static readonly DependencyProperty IconSizeProperty =
+        public static   DependencyProperty IconSizeProperty =
             DependencyProperty.Register("IconSize",
                 typeof(double),
                 typeof(Charts),
@@ -530,7 +530,7 @@ namespace UI.Controls.Charts
             get { return (ContextMenu)GetValue(ItemMenuProperty); }
             set { SetValue(ItemMenuProperty, value); }
         }
-        public static readonly DependencyProperty ItemMenuProperty =
+        public static   DependencyProperty ItemMenuProperty =
             DependencyProperty.Register("ItemMenu",
                 typeof(ContextMenu),
                 typeof(Charts));

@@ -15,7 +15,7 @@ namespace UI.Controls.Base
             get { return (string)GetValue(ContentProperty); }
             set { SetValue(ContentProperty, value); }
         }
-        public static readonly DependencyProperty ContentProperty =
+        public static   DependencyProperty ContentProperty =
             DependencyProperty.Register("Content",
                 typeof(string),
                 typeof(Text));
@@ -24,7 +24,7 @@ namespace UI.Controls.Base
             get { return (bool)GetValue(ValueProperty); }
             set { SetValue(ValueProperty, value); }
         }
-        public static readonly DependencyProperty ValueProperty =
+        public static   DependencyProperty ValueProperty =
             DependencyProperty.Register("Value",
                 typeof(bool),
                 typeof(Text), new PropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));

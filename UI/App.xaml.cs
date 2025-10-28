@@ -28,7 +28,7 @@ namespace UI
     /// </summary>
     public partial class App : Application
     {
-        private readonly ServiceProvider serviceProvider;
+        private   ServiceProvider serviceProvider;
         private System.Threading.Mutex mutex;
         //  保活窗口
         private HideWindow keepaliveWindow;

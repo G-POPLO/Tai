@@ -23,7 +23,7 @@ namespace UI.Controls.DatePickerBar
             get { return (DatePickerShowType)GetValue(ShowTypeProperty); }
             set { SetValue(ShowTypeProperty, value); }
         }
-        public static readonly DependencyProperty ShowTypeProperty =
+        public static   DependencyProperty ShowTypeProperty =
             DependencyProperty.Register("ShowType", typeof(DatePickerShowType), typeof(DatePickerBar), new PropertyMetadata(DatePickerShowType.Day, new PropertyChangedCallback(OnShowTypeChanged)));
 
         private static void OnShowTypeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -40,7 +40,7 @@ namespace UI.Controls.DatePickerBar
             get { return (DateTime)GetValue(SelectedDateProperty); }
             set { SetValue(SelectedDateProperty, value); }
         }
-        public static readonly DependencyProperty SelectedDateProperty =
+        public static   DependencyProperty SelectedDateProperty =
             DependencyProperty.Register("SelectedDate", typeof(DateTime), typeof(DatePickerBar), new PropertyMetadata(new PropertyChangedCallback(OnSelectedItemChanged)));
 
         private static void OnSelectedItemChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -63,7 +63,7 @@ namespace UI.Controls.DatePickerBar
             get { return (string)GetValue(SelectedDateStringProperty); }
             set { SetValue(SelectedDateStringProperty, value); }
         }
-        public static readonly DependencyProperty SelectedDateStringProperty =
+        public static   DependencyProperty SelectedDateStringProperty =
             DependencyProperty.Register("SelectedDateString", typeof(string), typeof(DatePickerBar));
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace UI.Controls.DatePickerBar
             get { return (bool)GetValue(IsShowDatePickerPopupProperty); }
             set { SetValue(IsShowDatePickerPopupProperty, value); }
         }
-        public static readonly DependencyProperty IsShowDatePickerPopupProperty =
+        public static   DependencyProperty IsShowDatePickerPopupProperty =
             DependencyProperty.Register("IsShowDatePickerPopup", typeof(bool), typeof(DatePickerBar));
 
 

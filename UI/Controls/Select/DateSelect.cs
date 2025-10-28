@@ -48,7 +48,7 @@ namespace UI.Controls.Select
             get { return (DateSelectType)GetValue(SelectTypeProperty); }
             set { SetValue(SelectTypeProperty, value); }
         }
-        public static readonly DependencyProperty SelectTypeProperty =
+        public static   DependencyProperty SelectTypeProperty =
             DependencyProperty.Register("SelectType",
                 typeof(DateSelectType),
                 typeof(DateSelect),
@@ -59,7 +59,7 @@ namespace UI.Controls.Select
             get { return (DateTime)GetValue(DateProperty); }
             set { SetValue(DateProperty, value); }
         }
-        public static readonly DependencyProperty DateProperty =
+        public static   DependencyProperty DateProperty =
             DependencyProperty.Register("Date",
                 typeof(DateTime),
                 typeof(DateSelect),
@@ -79,7 +79,7 @@ namespace UI.Controls.Select
             get { return (int)GetValue(YearProperty); }
             set { SetValue(YearProperty, value); }
         }
-        public static readonly DependencyProperty YearProperty =
+        public static   DependencyProperty YearProperty =
             DependencyProperty.Register("Year",
                 typeof(int),
                 typeof(DateSelect)
@@ -90,7 +90,7 @@ namespace UI.Controls.Select
             get { return (int)GetValue(MonthProperty); }
             set { SetValue(MonthProperty, value); }
         }
-        public static readonly DependencyProperty MonthProperty =
+        public static   DependencyProperty MonthProperty =
             DependencyProperty.Register("Month",
                 typeof(int),
                 typeof(DateSelect)
@@ -101,7 +101,7 @@ namespace UI.Controls.Select
             get { return (DayModel)GetValue(DayProperty); }
             set { SetValue(DayProperty, value); }
         }
-        public static readonly DependencyProperty DayProperty =
+        public static   DependencyProperty DayProperty =
             DependencyProperty.Register("Day",
                 typeof(DayModel),
                 typeof(DateSelect)
@@ -111,7 +111,7 @@ namespace UI.Controls.Select
             get { return (string)GetValue(DateStrProperty); }
             set { SetValue(DateStrProperty, value); }
         }
-        public static readonly DependencyProperty DateStrProperty =
+        public static   DependencyProperty DateStrProperty =
             DependencyProperty.Register("DateStr",
                 typeof(string),
                 typeof(DateSelect)
@@ -121,7 +121,7 @@ namespace UI.Controls.Select
             get { return (List<DayModel>)GetValue(DaysProperty); }
             set { SetValue(DaysProperty, value); }
         }
-        public static readonly DependencyProperty DaysProperty =
+        public static   DependencyProperty DaysProperty =
             DependencyProperty.Register("Days",
                 typeof(List<DayModel>),
                 typeof(DateSelect)
@@ -132,7 +132,7 @@ namespace UI.Controls.Select
             get { return (bool)GetValue(IsOpenProperty); }
             set { SetValue(IsOpenProperty, value); }
         }
-        public static readonly DependencyProperty IsOpenProperty =
+        public static   DependencyProperty IsOpenProperty =
             DependencyProperty.Register("IsOpen",
                 typeof(bool),
                 typeof(DateSelect), new PropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));
@@ -146,8 +146,8 @@ namespace UI.Controls.Select
             }
         }
 
-        private readonly Win32API.LowLevelKeyboardProc mouseProc;
-        private static readonly IntPtr hookMouseID = IntPtr.Zero;
+        private   Win32API.LowLevelKeyboardProc mouseProc;
+        private static   IntPtr hookMouseID = IntPtr.Zero;
         private IntPtr hook;
         public Command ShowSelectCommand { get; set; }
         public Command SetYearCommand { get; set; }

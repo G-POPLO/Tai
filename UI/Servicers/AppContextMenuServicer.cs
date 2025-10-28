@@ -18,12 +18,12 @@ namespace UI.Servicers
     public class AppContextMenuServicer : IAppContextMenuServicer
     {
 
-        private readonly MainViewModel main;
-        private readonly ICategorys categorys;
-        private readonly IAppData appData;
-        private readonly IAppConfig appConfig;
-        private readonly IThemeServicer theme;
-        private readonly IUIServicer _uIServicer;
+        private   MainViewModel main;
+        private   ICategorys categorys;
+        private   IAppData appData;
+        private   IAppConfig appConfig;
+        private   IThemeServicer theme;
+        private   IUIServicer _uIServicer;
         private ContextMenu menu;
         private MenuItem setCategory;
         private MenuItem setLink;

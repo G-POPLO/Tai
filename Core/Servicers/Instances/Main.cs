@@ -27,18 +27,18 @@ namespace Core.Servicers.Instances
 {
     public class Main : IMain
     {
-        private readonly IAppObserver appObserver;
-        private readonly IData data;
-        private readonly ISleepdiscover sleepdiscover;
-        private readonly IAppConfig appConfig;
-        private readonly IAppData appData;
-        private readonly ICategorys categories;
-        private readonly IWebFilter _webFilter;
-        private readonly IAppTimerServicer _appTimer;
-        private readonly IWebServer _webServer;
-        private readonly IWebData _webData;
+        private   IAppObserver appObserver;
+        private   IData data;
+        private   ISleepdiscover sleepdiscover;
+        private   IAppConfig appConfig;
+        private   IAppData appData;
+        private   ICategorys categories;
+        private   IWebFilter _webFilter;
+        private   IAppTimerServicer _appTimer;
+        private   IWebServer _webServer;
+        private   IWebData _webData;
         //  忽略的进程
-        private readonly string[] DefaultIgnoreProcess = new string[] {
+        private   string[] DefaultIgnoreProcess = new string[] {
             "Tai",
             "SearchHost",
             "Taskmgr",
@@ -68,7 +68,7 @@ namespace Core.Servicers.Instances
         /// <summary>
         /// 忽略进程缓存列表
         /// </summary>
-        private readonly List<string> IgnoreProcessCacheList;
+        private   List<string> IgnoreProcessCacheList;
 
         /// <summary>
         /// 配置正则忽略进程列表
@@ -81,7 +81,7 @@ namespace Core.Servicers.Instances
         //  更新应用日期
         private DateTime updadteAppDateTime_ = DateTime.Now.Date;
         //  已经更新过的应用列表
-        private readonly List<string> updatedAppList = new List<string>();
+        private   List<string> updatedAppList = new List<string>();
         private List<string> _configProcessNameWhiteList, _configProcessRegexWhiteList;
         public Main(
             IAppObserver appObserver,

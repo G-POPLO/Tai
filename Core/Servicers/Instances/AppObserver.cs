@@ -32,8 +32,8 @@ namespace Core.Servicers.Instances
 
         //  获得焦点事件
         private WinEventDelegate _foregroundEventDelegate;
-        private readonly IAppManager _appManager;
-        private readonly IWindowManager _windowManager;
+        private   IAppManager _appManager;
+        private   IWindowManager _windowManager;
         private IntPtr _hook;
         private bool _isStart = false;
         private System.Timers.Timer _delayDetectTimer;

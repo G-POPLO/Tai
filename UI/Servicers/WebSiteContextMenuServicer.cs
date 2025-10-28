@@ -21,11 +21,11 @@ namespace UI.Servicers
     public class WebSiteContextMenuServicer : IWebSiteContextMenuServicer
     {
 
-        private readonly MainViewModel _main;
-        private readonly IAppConfig _appConfig;
-        private readonly IThemeServicer _theme;
-        private readonly IWebData _webData;
-        private readonly IUIServicer _uIServicer;
+        private   MainViewModel _main;
+        private   IAppConfig _appConfig;
+        private   IThemeServicer _theme;
+        private   IWebData _webData;
+        private   IUIServicer _uIServicer;
 
         private ContextMenu _menu;
         private MenuItem _setCategory;

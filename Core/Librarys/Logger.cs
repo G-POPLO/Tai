@@ -18,9 +18,9 @@ namespace Core.Librarys
     {
         private const int threshold = 50;
 
-        private static readonly object writeLock = new object();
+        private static   object writeLock = new object();
 
-        private static readonly List<string> loggers = new List<string>();
+        private static   List<string> loggers = new List<string>();
 
 
         static Logger()

@@ -17,7 +17,7 @@ namespace UI.Controls.Button
             get { return (ICommand)GetValue(CommandProperty); }
             set { SetValue(CommandProperty, value); }
         }
-        public static readonly DependencyProperty CommandProperty =
+        public static   DependencyProperty CommandProperty =
             DependencyProperty.Register("Command",
                 typeof(ICommand),
                 typeof(IconButton));
@@ -27,7 +27,7 @@ namespace UI.Controls.Button
             get { return (object)GetValue(CommandParameterProperty); }
             set { SetValue(CommandParameterProperty, value); }
         }
-        public static readonly DependencyProperty CommandParameterProperty =
+        public static   DependencyProperty CommandParameterProperty =
             DependencyProperty.Register("CommandParameter",
                 typeof(object),
                 typeof(IconButton));
@@ -36,7 +36,7 @@ namespace UI.Controls.Button
             get { return (IconTypes)GetValue(IconProperty); }
             set { SetValue(IconProperty, value); }
         }
-        public static readonly DependencyProperty IconProperty =
+        public static   DependencyProperty IconProperty =
             DependencyProperty.Register("Icon",
                 typeof(IconTypes),
                 typeof(IconButton), new PropertyMetadata(IconTypes.None));

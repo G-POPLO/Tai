@@ -16,7 +16,7 @@ namespace UI.Controls.Base
             get { return (CornerRadius)GetValue(CornerRadiusProperty); }
             set { SetValue(CornerRadiusProperty, value); }
         }
-        public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.Register("CornerRadius",
+        public static   DependencyProperty CornerRadiusProperty = DependencyProperty.Register("CornerRadius",
                 typeof(CornerRadius),
                 typeof(Placeholder));
 

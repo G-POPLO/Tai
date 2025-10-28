@@ -14,7 +14,7 @@ namespace UI.Controls.List
     public class BaseList : Control
     {
         public ObservableCollection<string> Items { get { return (ObservableCollection<string>)GetValue(ItemsProperty); } set { SetValue(ItemsProperty, value); } }
-        public static readonly DependencyProperty ItemsProperty = DependencyProperty.Register("Items", typeof(ObservableCollection<string>), typeof(BaseList), new PropertyMetadata(new PropertyChangedCallback(ItemsChanged)));
+        public static   DependencyProperty ItemsProperty = DependencyProperty.Register("Items", typeof(ObservableCollection<string>), typeof(BaseList), new PropertyMetadata(new PropertyChangedCallback(ItemsChanged)));
 
         private static void ItemsChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -27,7 +27,7 @@ namespace UI.Controls.List
         }
 
         public string SelectedItem { get { return (string)GetValue(SelectedItemProperty); } set { SetValue(SelectedItemProperty, value); } }
-        public static readonly DependencyProperty SelectedItemProperty = DependencyProperty.Register("SelectedItem", typeof(string), typeof(BaseList), new PropertyMetadata(new PropertyChangedCallback(OnSelectedItemChanged)));
+        public static   DependencyProperty SelectedItemProperty = DependencyProperty.Register("SelectedItem", typeof(string), typeof(BaseList), new PropertyMetadata(new PropertyChangedCallback(OnSelectedItemChanged)));
 
         private static void OnSelectedItemChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {

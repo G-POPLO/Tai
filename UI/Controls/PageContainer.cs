@@ -23,7 +23,7 @@ namespace UI.Controls
             get { return (List<string>)GetValue(IndexUriListProperty); }
             set { SetValue(IndexUriListProperty, value); }
         }
-        public static readonly DependencyProperty IndexUriListProperty =
+        public static   DependencyProperty IndexUriListProperty =
             DependencyProperty.Register("IndexUriList", typeof(List<string>), typeof(PageContainer));
 
         public string Title
@@ -31,7 +31,7 @@ namespace UI.Controls
             get { return (string)GetValue(TitleProperty); }
             set { SetValue(TitleProperty, value); }
         }
-        public static readonly DependencyProperty TitleProperty =
+        public static   DependencyProperty TitleProperty =
             DependencyProperty.Register("Title",
                 typeof(string),
                 typeof(PageContainer));
@@ -41,7 +41,7 @@ namespace UI.Controls
             get { return (IServiceProvider)GetValue(ServiceProviderProperty); }
             set { SetValue(ServiceProviderProperty, value); }
         }
-        public static readonly DependencyProperty ServiceProviderProperty =
+        public static   DependencyProperty ServiceProviderProperty =
             DependencyProperty.Register("ServiceProvider", typeof(IServiceProvider), typeof(PageContainer));
 
         public object Content
@@ -49,7 +49,7 @@ namespace UI.Controls
             get { return (object)GetValue(ContentProperty); }
             set { SetValue(ContentProperty, value); }
         }
-        public static readonly DependencyProperty ContentProperty =
+        public static   DependencyProperty ContentProperty =
             DependencyProperty.Register("Content", typeof(object), typeof(PageContainer), new PropertyMetadata("Content undefined!"));
 
         public string Uri
@@ -57,7 +57,7 @@ namespace UI.Controls
             get { return (string)GetValue(UriProperty); }
             set { SetValue(UriProperty, value); }
         }
-        public static readonly DependencyProperty UriProperty =
+        public static   DependencyProperty UriProperty =
             DependencyProperty.Register("Uri", typeof(string), typeof(PageContainer), new PropertyMetadata(string.Empty, new PropertyChangedCallback(OnUriChanged)));
 
         private static void OnUriChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -80,7 +80,7 @@ namespace UI.Controls
             get { return (bool)GetValue(IsShowTilteBarProperty); }
             set { SetValue(IsShowTilteBarProperty, value); }
         }
-        public static readonly DependencyProperty IsShowTilteBarProperty =
+        public static   DependencyProperty IsShowTilteBarProperty =
             DependencyProperty.Register("IsShowTilteBar",
                 typeof(bool),
                 typeof(PageContainer), new PropertyMetadata(false, new PropertyChangedCallback(OnIsShowTitleBarChanged)));
@@ -98,7 +98,7 @@ namespace UI.Controls
             get { return (Visibility)GetValue(TitleBarVisibilityProperty); }
             set { SetValue(TitleBarVisibilityProperty, value); }
         }
-        public static readonly DependencyProperty TitleBarVisibilityProperty =
+        public static   DependencyProperty TitleBarVisibilityProperty =
             DependencyProperty.Register("TitleBarVisibility",
                 typeof(Visibility),
                 typeof(PageContainer), new PropertyMetadata(Visibility.Collapsed));
@@ -108,7 +108,7 @@ namespace UI.Controls
             get { return (Command)GetValue(BackCommandProperty); }
             set { SetValue(BackCommandProperty, value); }
         }
-        public static readonly DependencyProperty BackCommandProperty =
+        public static   DependencyProperty BackCommandProperty =
             DependencyProperty.Register("BackCommand",
                 typeof(Command),
                 typeof(PageContainer));
@@ -116,7 +116,7 @@ namespace UI.Controls
 
         public PageContainer Instance { get { return (PageContainer)GetValue(InstanceProperty); } set { SetValue(InstanceProperty, value); } }
 
-        public static readonly DependencyProperty InstanceProperty = DependencyProperty.Register("Instance", typeof(PageContainer), typeof(PageContainer));
+        public static   DependencyProperty InstanceProperty = DependencyProperty.Register("Instance", typeof(PageContainer), typeof(PageContainer));
         #endregion
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace UI.Controls
         /// </summary>
         public event EventHandler OnLoadPaged;
 
-        private readonly string ProjectName;
+        private   string ProjectName;
         private List<string> Historys;
         public int Index = 0, OldIndex = 0;
         private Dictionary<string, PageModel> PageCache;

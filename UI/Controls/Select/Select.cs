@@ -15,7 +15,7 @@ namespace UI.Controls.Select
             get { return (bool)GetValue(IsShowIconProperty); }
             set { SetValue(IsShowIconProperty, value); }
         }
-        public static readonly DependencyProperty IsShowIconProperty =
+        public static   DependencyProperty IsShowIconProperty =
             DependencyProperty.Register("IsShowIcon",
                 typeof(bool),
                 typeof(Select), new PropertyMetadata(true));
@@ -24,7 +24,7 @@ namespace UI.Controls.Select
             get { return (bool)GetValue(IsOpenProperty); }
             set { SetValue(IsOpenProperty, value); }
         }
-        public static readonly DependencyProperty IsOpenProperty =
+        public static   DependencyProperty IsOpenProperty =
             DependencyProperty.Register("IsOpen",
                 typeof(bool),
                 typeof(Select), new PropertyMetadata(new PropertyChangedCallback(OnIsOpenChanged)));
@@ -43,7 +43,7 @@ namespace UI.Controls.Select
             get { return (List<SelectItemModel>)GetValue(OptionsProperty); }
             set { SetValue(OptionsProperty, value); }
         }
-        public static readonly DependencyProperty OptionsProperty =
+        public static   DependencyProperty OptionsProperty =
             DependencyProperty.Register("Options",
                 typeof(List<SelectItemModel>),
                 typeof(Select), new PropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));
@@ -67,7 +67,7 @@ namespace UI.Controls.Select
             set { SetValue(SelectItemProperty, value); }
         }
 
-        public static readonly DependencyProperty SelectItemProperty = DependencyProperty.Register("SelectedItem", typeof(SelectItemModel), typeof(Select), new PropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));
+        public static   DependencyProperty SelectItemProperty = DependencyProperty.Register("SelectedItem", typeof(SelectItemModel), typeof(Select), new PropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));
 
         public event EventHandler OnSelectedItemChanged;
 

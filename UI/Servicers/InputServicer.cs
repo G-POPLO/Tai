@@ -15,8 +15,8 @@ namespace UI.Servicers
         public event InputEventHandler OnKeyDownInput;
         public event InputEventHandler OnKeyUpInput;
 
-        private readonly Win32API.LowLevelKeyboardProc keyboardProc;
-        private static readonly IntPtr hookKeyboardID = IntPtr.Zero;
+        private   Win32API.LowLevelKeyboardProc keyboardProc;
+        private static   IntPtr hookKeyboardID = IntPtr.Zero;
         private IntPtr keyboardHook;
         public InputServicer()
         {

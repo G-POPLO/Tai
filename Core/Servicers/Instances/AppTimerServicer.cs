@@ -16,7 +16,7 @@ namespace Core.Servicers.Instances
     {
         public event AppTimerEventHandler OnAppDurationUpdated;
 
-        private readonly IAppObserver _appObserver;
+        private   IAppObserver _appObserver;
 
         private bool _isStart = false;
         private int _appDuration = 0;

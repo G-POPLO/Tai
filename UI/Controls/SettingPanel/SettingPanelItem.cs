@@ -18,16 +18,16 @@ namespace UI.Controls.SettingPanel
         /// 描述
         /// </summary>
         public string Description { get { return (string)GetValue(DescriptionProperty); } set { SetValue(DescriptionProperty, value); } }
-        public static readonly DependencyProperty DescriptionProperty = DependencyProperty.Register("Description", typeof(string), typeof(SettingPanelItem));
+        public static   DependencyProperty DescriptionProperty = DependencyProperty.Register("Description", typeof(string), typeof(SettingPanelItem));
 
         public object Content { get { return (object)GetValue(ContentProperty); } set { SetValue(ContentProperty, value); } }
-        public static readonly DependencyProperty ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(SettingPanelItem));
+        public static   DependencyProperty ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(SettingPanelItem));
 
         /// <summary>
         /// 是否显示beta标识
         /// </summary>
         public bool IsBeta { get { return (bool)GetValue(IsBetaProperty); } set { SetValue(IsBetaProperty, value); } }
-        public static readonly DependencyProperty IsBetaProperty = DependencyProperty.Register("IsBeta", typeof(bool), typeof(SettingPanelItem));
+        public static   DependencyProperty IsBetaProperty = DependencyProperty.Register("IsBeta", typeof(bool), typeof(SettingPanelItem));
 
         public SettingPanelItem()
         {

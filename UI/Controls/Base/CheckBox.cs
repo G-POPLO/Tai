@@ -14,7 +14,7 @@ namespace UI.Controls.Base
             get { return (bool)GetValue(IsCheckedProperty); }
             set { SetValue(IsCheckedProperty, value); }
         }
-        public static readonly DependencyProperty IsCheckedProperty =
+        public static   DependencyProperty IsCheckedProperty =
             DependencyProperty.Register("IsChecked",
                 typeof(bool),
                 typeof(CheckBox), new PropertyMetadata(false, new PropertyChangedCallback(OnPropertyChanged)));

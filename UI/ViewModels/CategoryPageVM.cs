@@ -21,11 +21,11 @@ namespace UI.ViewModels
 {
     public class CategoryPageVM : CategoryPageModel
     {
-        private readonly ICategorys categorys;
-        private readonly MainViewModel mainVM;
-        private readonly IAppData appData;
-        private readonly IWebData _webData;
-        private readonly IUIServicer _uiServicer;
+        private   ICategorys categorys;
+        private   MainViewModel mainVM;
+        private   IAppData appData;
+        private   IWebData _webData;
+        private   IUIServicer _uiServicer;
 
         public Command GotoListCommand { get; set; }
         /// <summary>

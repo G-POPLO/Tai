@@ -23,12 +23,12 @@ namespace UI.ViewModels
 {
     public class WebSiteDetailPageVM : WebSiteDetailPageModel
     {
-        private readonly IWebData _webData;
-        private readonly MainViewModel _mainVM;
-        private readonly IAppConfig _appConfig;
-        private readonly IWebFilter _webFilter;
-        private readonly IInputServicer _input;
-        private readonly IUIServicer _uIServicer;
+        private   IWebData _webData;
+        private   MainViewModel _mainVM;
+        private   IAppConfig _appConfig;
+        private   IWebFilter _webFilter;
+        private   IInputServicer _input;
+        private   IUIServicer _uIServicer;
 
         public Command PageCommand { get; set; }
 

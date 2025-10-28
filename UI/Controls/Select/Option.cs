@@ -15,7 +15,7 @@ namespace UI.Controls.Select
             get { return (bool)GetValue(IsShowIconProperty); }
             set { SetValue(IsShowIconProperty, value); }
         }
-        public static readonly DependencyProperty IsShowIconProperty =
+        public static   DependencyProperty IsShowIconProperty =
             DependencyProperty.Register("IsShowIcon",
                 typeof(bool),
                 typeof(Option), new PropertyMetadata(true));
@@ -24,7 +24,7 @@ namespace UI.Controls.Select
             get { return (bool)GetValue(IsCheckedProperty); }
             set { SetValue(IsCheckedProperty, value); }
         }
-        public static readonly DependencyProperty IsCheckedProperty =
+        public static   DependencyProperty IsCheckedProperty =
             DependencyProperty.Register("IsChecked",
                 typeof(bool),
                 typeof(Option), new PropertyMetadata(false));
@@ -34,7 +34,7 @@ namespace UI.Controls.Select
             get { return (SelectItemModel)GetValue(ValueProperty); }
             set { SetValue(ValueProperty, value); }
         }
-        public static readonly DependencyProperty ValueProperty =
+        public static   DependencyProperty ValueProperty =
            DependencyProperty.Register("Value",
                typeof(SelectItemModel),
                typeof(Option));

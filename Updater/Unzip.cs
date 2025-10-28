@@ -14,7 +14,7 @@ namespace Updater
         /// <summary>
         /// 忽略的文件列表
         /// </summary>
-        static readonly string[] IgnoreFiles = { };
+        static   string[] IgnoreFiles = { };
         public static bool ExtractZipFile(string zipPath, string extractPath)
         {
             try

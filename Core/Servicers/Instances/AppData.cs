@@ -16,8 +16,8 @@ namespace Core.Servicers.Instances
     {
         private List<AppModel> _apps;
 
-        private readonly IDatabase _databse;
-        private readonly object _locker = new object();
+        private   IDatabase _databse;
+        private   object _locker = new object();
         public AppData(IDatabase databse)
         {
             _databse = databse;

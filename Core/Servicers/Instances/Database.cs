@@ -15,10 +15,10 @@ namespace Core.Servicers.Instances
     public class Database : IDatabase
     {
         private TaiDbContext _writerContext;
-        private readonly object _writeLocker = new object();
-        private readonly object _readLocker = new object();
-        private readonly object _closeLocker = new object();
-        private readonly byte _outTime = 60;
+        private   object _writeLocker = new object();
+        private   object _readLocker = new object();
+        private   object _closeLocker = new object();
+        private   byte _outTime = 60;
         private byte _readerNum = 0;
         private bool _isWriting = false;
         private bool _isReading = false;

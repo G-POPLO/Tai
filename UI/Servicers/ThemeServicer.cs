@@ -22,8 +22,8 @@ namespace UI.Servicers
         private string themeName;
         private MainWindow mainWindow;
         private Collection<ResourceDictionary> MergedDictionaries;
-        private readonly string[] themeOptions = { "Light", "Dark" };
-        private readonly IAppConfig appConfig;
+        private   string[] themeOptions = { "Light", "Dark" };
+        private   IAppConfig appConfig;
 
         public event EventHandler OnThemeChanged;
 

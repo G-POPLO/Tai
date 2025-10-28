@@ -22,14 +22,14 @@ namespace UI.Controls.Tabbar
             get { return (Color)GetValue(SelectedTextColorProperty); }
             set { SetValue(SelectedTextColorProperty, value); }
         }
-        public static readonly DependencyProperty SelectedTextColorProperty =
+        public static   DependencyProperty SelectedTextColorProperty =
             DependencyProperty.Register("SelectedTextColor", typeof(Color), typeof(Tabbar));
         public int SelectedIndex
         {
             get { return (int)GetValue(SelectedIndexProperty); }
             set { SetValue(SelectedIndexProperty, value); }
         }
-        public static readonly DependencyProperty SelectedIndexProperty =
+        public static   DependencyProperty SelectedIndexProperty =
             DependencyProperty.Register("SelectedIndex", typeof(int), typeof(Tabbar), new PropertyMetadata((int)0, new PropertyChangedCallback(OnSelectedItemChanged)));
 
         private static void OnSelectedItemChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -53,7 +53,7 @@ namespace UI.Controls.Tabbar
                 SetValue(DataProperty, value);
             }
         }
-        public static readonly DependencyProperty DataProperty =
+        public static   DependencyProperty DataProperty =
             DependencyProperty.Register("Data", typeof(ObservableCollection<string>), typeof(Tabbar));
 
 

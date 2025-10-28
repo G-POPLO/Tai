@@ -32,7 +32,7 @@ namespace UI.Controls.Charts
             get { return (List<ChartsDataModel>)GetValue(DataProperty); }
             set { SetValue(DataProperty, value); }
         }
-        public static readonly DependencyProperty DataProperty =
+        public static   DependencyProperty DataProperty =
             DependencyProperty.Register("Data",
                 typeof(List<ChartsDataModel>),
                 typeof(ChartsItemTypeRadar));
@@ -49,7 +49,7 @@ namespace UI.Controls.Charts
             get { return (double)GetValue(MaxValueProperty); }
             set { SetValue(MaxValueProperty, value); }
         }
-        public static readonly DependencyProperty MaxValueProperty =
+        public static   DependencyProperty MaxValueProperty =
             DependencyProperty.Register("MaxValue",
                 typeof(double),
                 typeof(ChartsItemTypeRadar));
@@ -66,7 +66,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsLoadingProperty); }
             set { SetValue(IsLoadingProperty, value); }
         }
-        public static readonly DependencyProperty IsLoadingProperty =
+        public static   DependencyProperty IsLoadingProperty =
             DependencyProperty.Register("IsLoading",
                 typeof(bool),
                 typeof(ChartsItemTypeRadar));
@@ -79,7 +79,7 @@ namespace UI.Controls.Charts
             get { return (Geometry)GetValue(RadarPathDataProperty); }
             set { SetValue(RadarPathDataProperty, value); }
         }
-        public static readonly DependencyProperty RadarPathDataProperty =
+        public static   DependencyProperty RadarPathDataProperty =
             DependencyProperty.Register("RadarPathData",
                 typeof(Geometry),
                 typeof(ChartsItemTypeRadar));
@@ -297,6 +297,9 @@ namespace UI.Controls.Charts
         }
         private Size MeasureString(TextBlock textBlock)
         {
+            // 获取当前显示设备的像素密度（PixelsPerDip）
+            double pixelsPerDip = VisualTreeHelper.GetDpi(this).PixelsPerDip;
+
             var formattedText = new FormattedText(
                 textBlock.Text,
                 CultureInfo.CurrentCulture,
@@ -304,7 +307,8 @@ namespace UI.Controls.Charts
                 new Typeface(textBlock.FontFamily, textBlock.FontStyle, textBlock.FontWeight, textBlock.FontStretch),
                 textBlock.FontSize,
                 Brushes.Black,
-                new NumberSubstitution());
+                new NumberSubstitution(),
+                pixelsPerDip);
 
             return new Size(formattedText.Width, formattedText.Height);
         }

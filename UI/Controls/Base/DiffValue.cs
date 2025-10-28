@@ -26,7 +26,7 @@ namespace UI.Controls.Base
             get { return (double)GetValue(ValueProperty); }
             set { SetValue(ValueProperty, value); }
         }
-        public static readonly DependencyProperty ValueProperty =
+        public static   DependencyProperty ValueProperty =
             DependencyProperty.Register("Value",
                 typeof(double),
                 typeof(DiffValue), new PropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));
@@ -35,7 +35,7 @@ namespace UI.Controls.Base
             get { return (double)GetValue(LastValueProperty); }
             set { SetValue(LastValueProperty, value); }
         }
-        public static readonly DependencyProperty LastValueProperty =
+        public static   DependencyProperty LastValueProperty =
             DependencyProperty.Register("LastValue",
                 typeof(double),
                 typeof(DiffValue), new PropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));
@@ -44,7 +44,7 @@ namespace UI.Controls.Base
             get { return (DiffType)GetValue(TypeProperty); }
             set { SetValue(TypeProperty, value); }
         }
-        public static readonly DependencyProperty TypeProperty =
+        public static   DependencyProperty TypeProperty =
             DependencyProperty.Register("Type",
                 typeof(DiffType),
                 typeof(DiffValue), new PropertyMetadata(DiffType.Percent, new PropertyChangedCallback(OnPropertyChanged)));

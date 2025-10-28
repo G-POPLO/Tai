@@ -26,7 +26,7 @@ namespace UI.Controls.Charts
             get { return (List<ChartsDataModel>)GetValue(DataProperty); }
             set { SetValue(DataProperty, value); }
         }
-        public static readonly DependencyProperty DataProperty =
+        public static   DependencyProperty DataProperty =
             DependencyProperty.Register("Data",
                 typeof(List<ChartsDataModel>),
                 typeof(ChartsItemTypePie));
@@ -43,7 +43,7 @@ namespace UI.Controls.Charts
             get { return (double)GetValue(MaxValueProperty); }
             set { SetValue(MaxValueProperty, value); }
         }
-        public static readonly DependencyProperty MaxValueProperty =
+        public static   DependencyProperty MaxValueProperty =
             DependencyProperty.Register("MaxValue",
                 typeof(double),
                 typeof(ChartsItemTypePie));
@@ -51,8 +51,8 @@ namespace UI.Controls.Charts
 
         #endregion
         private double _lastAngle = -Math.PI / 2;
-        private readonly byte _zIndex = 1;
-        private readonly List<Path> _paths = new List<Path>();
+        private   byte _zIndex = 1;
+        private   List<Path> _paths = new List<Path>();
         public ChartsItemTypePie()
         {
             DefaultStyleKey = typeof(ChartsItemTypePie);
@@ -108,8 +108,8 @@ namespace UI.Controls.Charts
                 }
             }
         }
-        private readonly double _lastX = -1;
-        private readonly double _lastY = -1;
+        private   double _lastX = -1;
+        private   double _lastY = -1;
 
         private Path CreatePath(double angle_, SolidColorBrush color_)
         {

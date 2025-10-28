@@ -22,13 +22,13 @@ namespace UI.ViewModels
 {
     public class DetailPageVM : DetailPageModel
     {
-        private readonly IData data;
-        private readonly MainViewModel main;
-        private readonly IAppConfig appConfig;
-        private readonly ICategorys categories;
-        private readonly IAppData appData;
-        private readonly IInputServicer inputServicer;
-        private readonly IUIServicer _uIServicer;
+        private   IData data;
+        private   MainViewModel main;
+        private   IAppConfig appConfig;
+        private   ICategorys categories;
+        private   IAppData appData;
+        private   IInputServicer inputServicer;
+        private   IUIServicer _uIServicer;
 
         private ConfigModel config;
         public Command BlockActionCommand { get; set; }

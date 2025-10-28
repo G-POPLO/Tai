@@ -20,9 +20,9 @@ namespace Core.Servicers.Instances
 {
     public class Data : IData
     {
-        private readonly IAppData _appData;
-        private readonly IDatabase _database;
-        private readonly object setLock = new object();
+        private   IAppData _appData;
+        private   IDatabase _database;
+        private   object setLock = new object();
         public Data(IAppData appData_, IDatabase database_)
         {
             _appData = appData_;

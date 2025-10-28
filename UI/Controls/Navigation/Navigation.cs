@@ -20,7 +20,7 @@ namespace UI.Controls.Navigation
             get { return (ContextMenu)GetValue(ItemContextMenuProperty); }
             set { SetValue(SelectedItemProperty, value); }
         }
-        public static readonly DependencyProperty ItemContextMenuProperty =
+        public static   DependencyProperty ItemContextMenuProperty =
             DependencyProperty.Register("ItemContextMenu", typeof(ContextMenu), typeof(Navigation));
 
         public NavigationItemModel SelectedItem
@@ -28,7 +28,7 @@ namespace UI.Controls.Navigation
             get { return (NavigationItemModel)GetValue(SelectedItemProperty); }
             set { SetValue(SelectedItemProperty, value); }
         }
-        public static readonly DependencyProperty SelectedItemProperty =
+        public static   DependencyProperty SelectedItemProperty =
             DependencyProperty.Register("SelectedItem", typeof(NavigationItemModel), typeof(Navigation), new PropertyMetadata(new PropertyChangedCallback(OnSelectedItemChanged)));
 
         private static void OnSelectedItemChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -55,7 +55,7 @@ namespace UI.Controls.Navigation
             get { return (bool)GetValue(IsShowNavigationProperty); }
             set { SetValue(IsShowNavigationProperty, value); }
         }
-        public static readonly DependencyProperty IsShowNavigationProperty =
+        public static   DependencyProperty IsShowNavigationProperty =
             DependencyProperty.Register("IsShowNavigation", typeof(bool), typeof(Navigation), new PropertyMetadata(true, new PropertyChangedCallback(OnIsShowNavigationChanged)));
 
         private static void OnIsShowNavigationChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -79,14 +79,14 @@ namespace UI.Controls.Navigation
             get { return (object)GetValue(TopExtContentProperty); }
             set { SetValue(TopExtContentProperty, value); }
         }
-        public static readonly DependencyProperty TopExtContentProperty =
+        public static   DependencyProperty TopExtContentProperty =
             DependencyProperty.Register("TopExtContent", typeof(object), typeof(Navigation));
         public object BottomExtContent
         {
             get { return (object)GetValue(BottomExtContentProperty); }
             set { SetValue(BottomExtContentProperty, value); }
         }
-        public static readonly DependencyProperty BottomExtContentProperty =
+        public static   DependencyProperty BottomExtContentProperty =
             DependencyProperty.Register("BottomExtContent", typeof(object), typeof(Navigation));
         public ObservableCollection<NavigationItemModel> Data
         {
@@ -99,7 +99,7 @@ namespace UI.Controls.Navigation
                 SetValue(DataProperty, value);
             }
         }
-        public static readonly DependencyProperty DataProperty =
+        public static   DependencyProperty DataProperty =
             DependencyProperty.Register("Data", typeof(ObservableCollection<NavigationItemModel>), typeof(Navigation), new PropertyMetadata(new PropertyChangedCallback(OnDataChanged)));
 
         private static void OnDataChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -131,7 +131,7 @@ namespace UI.Controls.Navigation
                 SetValue(WindowWidthProperty, value);
             }
         }
-        public static readonly DependencyProperty WindowWidthProperty =
+        public static   DependencyProperty WindowWidthProperty =
             DependencyProperty.Register("WindowWidth", typeof(double), typeof(Navigation), new PropertyMetadata(new PropertyChangedCallback(OnWindowWidthChanged)));
 
         private static void OnWindowWidthChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)

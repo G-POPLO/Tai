@@ -15,8 +15,8 @@ namespace UI.ViewModels
 {
     public class MainViewModel : MainWindowModel
     {
-        private readonly IServiceProvider serviceProvider;
-        private readonly IAppConfig appConfig;
+        private   IServiceProvider serviceProvider;
+        private   IAppConfig appConfig;
         public Command OnSelectedCommand { get; set; }
         public Command GotoPageCommand { get; set; }
 

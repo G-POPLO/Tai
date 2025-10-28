@@ -66,8 +66,8 @@ namespace Core.Servicers.Instances
         public static extern bool GetGUIThreadInfo(uint idThread, ref GUITHREADINFO lpgui);
         #endregion
 
-        private readonly Dictionary<string, AppInfo> _apps;
-        private readonly int _outTime = 5000;
+        private   Dictionary<string, AppInfo> _apps;
+        private   int _outTime = 5000;
         //private string _windowsVersionName;
         public AppManager()
         {

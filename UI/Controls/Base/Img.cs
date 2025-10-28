@@ -28,7 +28,7 @@ namespace UI.Controls.Base
             get { return (CornerRadius)GetValue(RadiusProperty); }
             set { SetValue(RadiusProperty, value); }
         }
-        public static readonly DependencyProperty RadiusProperty =
+        public static   DependencyProperty RadiusProperty =
             DependencyProperty.Register("Radius",
                 typeof(CornerRadius),
                 typeof(Img));
@@ -38,7 +38,7 @@ namespace UI.Controls.Base
             get { return (string)GetValue(SrcProperty); }
             set { SetValue(SrcProperty, value); }
         }
-        public static readonly DependencyProperty SrcProperty =
+        public static   DependencyProperty SrcProperty =
             DependencyProperty.Register("Src",
                 typeof(string),
                 typeof(Img), new PropertyMetadata("pack://application:,,,/Tai;component/Resources/Icons/defaultIcon.png", new PropertyChangedCallback(OnPropertyChanged)));
@@ -53,7 +53,7 @@ namespace UI.Controls.Base
             get { return (string)GetValue(URLProperty); }
             set { SetValue(URLProperty, value); }
         }
-        public static readonly DependencyProperty URLProperty =
+        public static   DependencyProperty URLProperty =
             DependencyProperty.Register("URL",
                 typeof(string),
                 typeof(Img), new PropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));

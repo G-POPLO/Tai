@@ -22,12 +22,12 @@ namespace UI.ViewModels
     public class DataPageVM : DataPageModel
     {
         public Command ToDetailCommand { get; set; }
-        private readonly IData data;
-        private readonly MainViewModel main;
-        private readonly IAppContextMenuServicer appContextMenuServicer;
-        private readonly IAppConfig appConfig;
-        private readonly IWebData _webData;
-        private readonly IWebSiteContextMenuServicer _webSiteContextMenu;
+        private   IData data;
+        private   MainViewModel main;
+        private   IAppContextMenuServicer appContextMenuServicer;
+        private   IAppConfig appConfig;
+        private   IWebData _webData;
+        private   IWebSiteContextMenuServicer _webSiteContextMenu;
 
         public DataPageVM(IData data, MainViewModel main, IAppContextMenuServicer appContextMenuServicer, IAppConfig appConfig, IWebData webData, IWebSiteContextMenuServicer webSiteContextMenu)
         {

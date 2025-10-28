@@ -24,7 +24,7 @@ namespace UI.Controls.Expander
             get { return (CornerRadius)GetValue(CornerRadiusProperty); }
             set { SetValue(CornerRadiusProperty, value); }
         }
-        public static readonly DependencyProperty CornerRadiusProperty =
+        public static   DependencyProperty CornerRadiusProperty =
             DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(Expander));
 
         public Command ExpanderCommand { get; set; }

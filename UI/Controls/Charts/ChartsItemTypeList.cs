@@ -30,7 +30,7 @@ namespace UI.Controls.Charts
             get { return (ChartsDataModel)GetValue(DataProperty); }
             set { SetValue(DataProperty, value); }
         }
-        public static readonly DependencyProperty DataProperty =
+        public static   DependencyProperty DataProperty =
             DependencyProperty.Register("Data",
                 typeof(ChartsDataModel),
                 typeof(ChartsItemTypeList));
@@ -47,7 +47,7 @@ namespace UI.Controls.Charts
             get { return (double)GetValue(MaxValueProperty); }
             set { SetValue(MaxValueProperty, value); }
         }
-        public static readonly DependencyProperty MaxValueProperty =
+        public static   DependencyProperty MaxValueProperty =
             DependencyProperty.Register("MaxValue",
                 typeof(double),
                 typeof(ChartsItemTypeList));
@@ -64,7 +64,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsLoadingProperty); }
             set { SetValue(IsLoadingProperty, value); }
         }
-        public static readonly DependencyProperty IsLoadingProperty =
+        public static   DependencyProperty IsLoadingProperty =
             DependencyProperty.Register("IsLoading",
                 typeof(bool),
                 typeof(ChartsItemTypeList));
@@ -81,7 +81,7 @@ namespace UI.Controls.Charts
             get { return (bool)GetValue(IsShowBadgeProperty); }
             set { SetValue(IsShowBadgeProperty, value); }
         }
-        public static readonly DependencyProperty IsShowBadgeProperty =
+        public static   DependencyProperty IsShowBadgeProperty =
             DependencyProperty.Register("IsShowBadge",
                 typeof(bool),
                 typeof(ChartsItemTypeList));
@@ -98,7 +98,7 @@ namespace UI.Controls.Charts
             get { return (double)GetValue(IconSizeProperty); }
             set { SetValue(IconSizeProperty, value); }
         }
-        public static readonly DependencyProperty IconSizeProperty =
+        public static   DependencyProperty IconSizeProperty =
             DependencyProperty.Register("IconSize",
                 typeof(double),
                 typeof(ChartsItemTypeList), new PropertyMetadata((double)25));

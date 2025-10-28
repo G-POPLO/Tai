@@ -24,19 +24,19 @@ namespace UI.Controls.SettingPanel
         /// 所有设置数据
         /// </summary>
         public Dictionary<string, List<string>> SettingData { get { return (Dictionary<string, List<string>>)GetValue(SettingDataProperty); } set { SetValue(SettingDataProperty, value); } }
-        public static readonly DependencyProperty SettingDataProperty = DependencyProperty.Register("SettingData", typeof(Dictionary<string, List<string>>), typeof(SettingPanelMultiItem));
+        public static   DependencyProperty SettingDataProperty = DependencyProperty.Register("SettingData", typeof(Dictionary<string, List<string>>), typeof(SettingPanelMultiItem));
         public bool Fold { get { return (bool)GetValue(FoldProperty); } set { SetValue(FoldProperty, value); } }
-        public static readonly DependencyProperty FoldProperty = DependencyProperty.Register("Fold", typeof(bool), typeof(SettingPanelMultiItem), new PropertyMetadata(false));
+        public static   DependencyProperty FoldProperty = DependencyProperty.Register("Fold", typeof(bool), typeof(SettingPanelMultiItem), new PropertyMetadata(false));
 
         public object Data { get { return (object)GetValue(DataProperty); } set { SetValue(DataProperty, value); } }
-        public static readonly DependencyProperty DataProperty = DependencyProperty.Register("Data", typeof(object), typeof(SettingPanelMultiItem));
+        public static   DependencyProperty DataProperty = DependencyProperty.Register("Data", typeof(object), typeof(SettingPanelMultiItem));
 
         public Command OnRemoveAction { get { return (Command)GetValue(OnRemoveActionProperty); } set { SetValue(OnRemoveActionProperty, value); } }
-        public static readonly DependencyProperty OnRemoveActionProperty = DependencyProperty.Register("OnRemoveAction", typeof(Command), typeof(SettingPanelMultiItem));
+        public static   DependencyProperty OnRemoveActionProperty = DependencyProperty.Register("OnRemoveAction", typeof(Command), typeof(SettingPanelMultiItem));
         public Command OnFoldAction { get { return (Command)GetValue(OnFoldActionProperty); } set { SetValue(OnFoldActionProperty, value); } }
-        public static readonly DependencyProperty OnFoldActionProperty = DependencyProperty.Register("OnFoldAction", typeof(Command), typeof(SettingPanelMultiItem));
+        public static   DependencyProperty OnFoldActionProperty = DependencyProperty.Register("OnFoldAction", typeof(Command), typeof(SettingPanelMultiItem));
         public string Title { get { return (string)GetValue(TitleProperty); } set { SetValue(TitleProperty, value); } }
-        public static readonly DependencyProperty TitleProperty = DependencyProperty.Register("Title", typeof(string), typeof(SettingPanelMultiItem));
+        public static   DependencyProperty TitleProperty = DependencyProperty.Register("Title", typeof(string), typeof(SettingPanelMultiItem));
         public event EventHandler DataChanged;
 
         private StackPanel Container;
